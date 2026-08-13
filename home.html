@@ -1,0 +1,3372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta
+    name="theme-color"
+    content="#202020">
+
+<meta
+    name="description"
+    content="STUDIO 13D - Professional Photography and Videography Studio">
+
+<title>STUDIO 13D | Photography & Videography Studio</title>
+
+
+<!-- =====================================================
+     GOOGLE FONT
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --black: #0d0d0d;
+
+    --dark: #151515;
+
+    --dark-grey: #202020;
+
+    --medium-grey: #292929;
+
+    --gray: #a7a7a7;
+
+    --light-gray: #d7d7d7;
+
+    --border: #383838;
+
+    --white: #ffffff;
+
+    --gold: #c89b3c;
+
+    --gold-light: #ddb14e;
+
+    --radius: 18px;
+
+    --max-width: 1200px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 75px;
+
+}
+
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background: var(--dark-grey);
+
+    color: white;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+}
+
+
+body.lightbox-open {
+
+    overflow: hidden;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 9999;
+
+    background: rgba(25,25,25,.95);
+
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+
+}
+
+
+.navbar {
+
+    max-width: var(--max-width);
+
+    height: 68px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: -.5px;
+
+}
+
+
+.logo span {
+
+    color: var(--gold);
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 27px;
+
+    list-style: none;
+
+}
+
+
+.nav-links a {
+
+    color: #cccccc;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .25s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--gold);
+
+}
+
+
+.nav-button {
+
+    padding: 9px 18px;
+
+    border-radius: 30px;
+
+    background: var(--gold);
+
+    color: #111 !important;
+
+}
+
+
+.nav-button:hover {
+
+    background: var(--gold-light);
+
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu-button {
+
+    display: none;
+
+    width: 43px;
+
+    height: 43px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: var(--medium-grey);
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+}
+
+
+.mobile-menu-button span {
+
+    width: 19px;
+
+    height: 2px;
+
+    background: white;
+
+}
+
+
+.mobile-navigation {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 68px 0 0 0;
+
+    z-index: 9998;
+
+    background: #191919;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+}
+
+
+.mobile-navigation.active {
+
+    display: block;
+
+}
+
+
+.mobile-navigation a {
+
+    display: block;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+}
+
+
+.mobile-navigation .mobile-book {
+
+    margin-top: 18px;
+
+    text-align: center;
+
+    padding: 14px;
+
+    background: var(--gold);
+
+    color: #111;
+
+    border-radius: 11px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    background:
+
+        radial-gradient(
+            circle at 75% 35%,
+            #333333 0%,
+            #252525 35%,
+            #202020 70%
+        );
+
+}
+
+
+.hero-container {
+
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 30px 25px 45px;
+
+    display: grid;
+
+    grid-template-columns: .9fr 1.1fr;
+
+    gap: 42px;
+
+    align-items: center;
+
+    min-height: calc(100vh - 68px);
+
+}
+
+
+.hero-content small {
+
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.hero-content h1 {
+
+    font-size: clamp(44px, 6vw, 72px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 17px;
+
+}
+
+
+.hero-content p {
+
+    max-width: 520px;
+
+    color: var(--gray);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 23px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 45px;
+
+    padding: 11px 21px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: .25s;
+
+}
+
+
+.button-gold {
+
+    background: var(--gold);
+
+    color: #111;
+
+}
+
+
+.button-gold:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+
+}
+
+
+.button-outline {
+
+    border: 1px solid #555;
+
+}
+
+
+.button-outline:hover {
+
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.featured-visual {
+
+    height: 500px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 23px;
+
+    border: 1px solid #3b3b3b;
+
+    background: #151515;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,.45);
+
+}
+
+
+.featured-visual img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform .8s ease;
+
+}
+
+
+.featured-visual:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+.featured-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 27px;
+
+    background:
+        linear-gradient(
+            transparent 40%,
+            rgba(0,0,0,.9)
+        );
+
+}
+
+
+.featured-overlay small {
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.featured-overlay h2 {
+
+    font-size: 28px;
+
+    margin-top: 5px;
+
+}
+
+
+.featured-overlay p {
+
+    color: #ccc;
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
+section {
+
+    padding: 55px 25px;
+
+}
+
+
+.section-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.section-heading small {
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+.section-heading h2 {
+
+    margin-top: 6px;
+
+    font-size: clamp(31px,5vw,46px);
+
+    letter-spacing: -2px;
+
+}
+
+
+.section-heading p {
+
+    max-width: 620px;
+
+    margin: 10px auto 0;
+
+    color: var(--gray);
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
+
+.categories {
+
+    background: var(--dark-grey);
+
+}
+
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    gap: 13px;
+
+}
+
+
+.category-card {
+
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    border: 1px solid var(--border);
+
+    background: #252525;
+
+}
+
+
+.category-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s ease;
+
+}
+
+
+.category-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+.category-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 19px;
+
+    background:
+
+        linear-gradient(
+            transparent 30%,
+            rgba(0,0,0,.94)
+        );
+
+}
+
+
+.category-number {
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.category-overlay h3 {
+
+    font-size: 20px;
+
+    margin: 4px 0;
+
+}
+
+
+.category-overlay p {
+
+    color: #ccc;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+
+
+.category-link {
+
+    margin-top: 10px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    color: white;
+
+}
+
+
+/* =====================================================
+   PORTFOLIO
+===================================================== */
+
+.portfolio {
+
+    background: #181818;
+
+}
+
+
+.filter-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+
+}
+
+
+.filter-button {
+
+    border: 1px solid var(--border);
+
+    background: #242424;
+
+    color: #aaa;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    transition: .25s;
+
+}
+
+
+.filter-button:hover {
+
+    border-color: var(--gold);
+
+    color: white;
+
+}
+
+
+.filter-button.active {
+
+    background: var(--gold);
+
+    border-color: var(--gold);
+
+    color: #111;
+
+}
+
+
+/* =====================================================
+   CINEMATIC PORTFOLIO
+===================================================== */
+
+.cinematic-grid {
+
+    display: grid;
+
+    grid-template-columns: 1.4fr .8fr .8fr;
+
+    grid-auto-rows: 245px;
+
+    gap: 12px;
+
+}
+
+
+.portfolio-item {
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #242424;
+
+    cursor: pointer;
+
+}
+
+
+.portfolio-item.featured {
+
+    grid-row: span 2;
+
+}
+
+
+.portfolio-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .7s ease;
+
+}
+
+
+.portfolio-item:hover img {
+
+    transform: scale(1.07);
+
+    filter: brightness(.75);
+
+}
+
+
+.portfolio-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 20px;
+
+    background:
+
+        linear-gradient(
+            transparent 35%,
+            rgba(0,0,0,.9)
+        );
+
+}
+
+
+.portfolio-overlay span {
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.portfolio-overlay h3 {
+
+    font-size: 16px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =====================================================
+   VIDEO PLAY BUTTON
+===================================================== */
+
+.play-button {
+
+    position: absolute;
+
+    top: 17px;
+
+    left: 17px;
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.95);
+
+    color: #111;
+
+    font-size: 17px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+
+    transition: .3s;
+
+}
+
+
+.portfolio-item:hover .play-button {
+
+    transform: scale(1.1);
+
+    background: var(--gold);
+
+}
+
+
+/* =====================================================
+   SHOWREEL
+===================================================== */
+
+.showreel {
+
+    background: #101010;
+
+}
+
+
+.showreel-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.showreel-video {
+
+    position: relative;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: 1px solid #3b3b3b;
+
+    background: #080808;
+
+}
+
+
+.showreel-video iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: 0;
+
+}
+
+
+.showreel-label {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    z-index: 2;
+
+    padding: 7px 11px;
+
+    border-radius: 30px;
+
+    background: rgba(0,0,0,.7);
+
+    backdrop-filter: blur(8px);
+
+    color: white;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+/* =====================================================
+   CATEGORY DETAIL SECTIONS
+===================================================== */
+
+.services {
+
+    background: #1b1b1b;
+
+}
+
+
+.category-detail {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    text-align: center;
+
+}
+
+
+.category-detail p {
+
+    color: var(--gray);
+
+}
+
+
+/* =====================================================
+   AR CARDS
+===================================================== */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 13px;
+
+}
+
+
+.card {
+
+    padding: 24px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 15px;
+
+    background: #252525;
+
+}
+
+
+.card-icon {
+
+    color: var(--gold);
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.card h3 {
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+
+}
+
+
+.card p {
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================================
+   BOOKING
+===================================================== */
+
+.booking {
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #111,
+            #252525
+        );
+
+}
+
+
+.booking .button {
+
+    background: var(--gold);
+
+    color: #111;
+
+}
+
+
+.booking .button:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+
+}
+
+
+.contact-info h2 {
+
+    font-size: 38px;
+
+    letter-spacing: -1.5px;
+
+}
+
+
+.contact-info > p {
+
+    color: var(--gray);
+
+    margin: 10px 0 22px;
+
+}
+
+
+.contact-details {
+
+    display: grid;
+
+    gap: 10px;
+
+}
+
+
+.contact-item {
+
+    padding: 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 11px;
+
+    background: #252525;
+
+}
+
+
+.contact-item strong {
+
+    display: block;
+
+    font-size: 11px;
+
+}
+
+
+.contact-item span {
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+}
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+.contact-form {
+
+    display: grid;
+
+    gap: 10px;
+
+}
+
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 9px;
+
+    background: #252525;
+
+    color: white;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+}
+
+
+.contact-form textarea {
+
+    height: 120px;
+
+    resize: vertical;
+
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    border-color: var(--gold);
+
+}
+
+
+.contact-form button {
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #101010;
+
+    border-top: 1px solid var(--border);
+
+    color: #777;
+
+    font-size: 11px;
+
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(0,0,0,.94);
+
+}
+
+
+.lightbox.active {
+
+    display: flex;
+
+}
+
+
+.lightbox-image {
+
+    max-width: 92vw;
+
+    max-height: 87vh;
+
+    object-fit: contain;
+
+    border-radius: 7px;
+
+    box-shadow: 0 30px 100px rgba(0,0,0,.7);
+
+}
+
+
+.lightbox-close {
+
+    position: fixed;
+
+    top: 20px;
+
+    right: 20px;
+
+    width: 43px;
+
+    height: 43px;
+
+    border-radius: 50%;
+
+    border: 1px solid #555;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 21px;
+
+    cursor: pointer;
+
+}
+
+
+.lightbox-caption {
+
+    position: fixed;
+
+    bottom: 20px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 12px;
+
+    text-align: center;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:1000px) {
+
+    .category-grid {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+
+    .cinematic-grid {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+
+    .portfolio-item.featured {
+
+        grid-row: span 2;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: repeat(2,1fr);
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px) {
+
+
+    /* HEADER */
+
+    .navbar {
+
+        height: 64px;
+
+        padding: 0 17px;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    .mobile-menu-button {
+
+        display: flex;
+
+    }
+
+
+    .mobile-navigation {
+
+        inset: 64px 0 0 0;
+
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+        padding: 25px 17px 35px;
+
+        gap: 22px;
+
+        min-height: auto;
+
+    }
+
+
+    .hero-content {
+
+        text-align: center;
+
+    }
+
+
+    .hero-content small {
+
+        margin-bottom: 7px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 42px;
+
+        letter-spacing: -2.5px;
+
+        margin-bottom: 14px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 13px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+    }
+
+
+    .hero-buttons .button {
+
+        width: 100%;
+
+    }
+
+
+    .featured-visual {
+
+        height: 370px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .featured-overlay {
+
+        padding: 21px;
+
+    }
+
+
+    .featured-overlay h2 {
+
+        font-size: 23px;
+
+    }
+
+
+    /* SECTIONS */
+
+    section {
+
+        padding: 45px 17px;
+
+    }
+
+
+    .section-heading {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size: 31px;
+
+    }
+
+
+    .section-heading p {
+
+        font-size: 12px;
+
+    }
+
+
+    /* CATEGORY */
+
+    .category-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+
+    }
+
+
+    .category-card {
+
+        height: 320px;
+
+    }
+
+
+    /* PORTFOLIO */
+
+    .filter-buttons {
+
+        gap: 6px;
+
+        margin-bottom: 17px;
+
+    }
+
+
+    .filter-button {
+
+        padding: 7px 12px;
+
+        font-size: 10px;
+
+    }
+
+
+    .cinematic-grid {
+
+        grid-template-columns: 1fr;
+
+        grid-auto-rows: 280px;
+
+        gap: 10px;
+
+    }
+
+
+    .portfolio-item.featured {
+
+        grid-row: span 1;
+
+    }
+
+
+    /* SHOWREEL */
+
+    .showreel-video {
+
+        border-radius: 13px;
+
+    }
+
+
+    /* CARDS */
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .card {
+
+        padding: 20px;
+
+    }
+
+
+    /* CONTACT */
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 32px;
+
+    }
+
+
+    .contact-info h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .contact-form input,
+    .contact-form textarea {
+
+        font-size: 16px;
+
+    }
+
+
+    /* LIGHTBOX */
+
+    .lightbox {
+
+        padding: 15px;
+
+    }
+
+
+    .lightbox-image {
+
+        max-width: 96vw;
+
+        max-height: 80vh;
+
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media(max-width:380px) {
+
+    .hero-content h1 {
+
+        font-size: 37px;
+
+    }
+
+
+    .featured-visual {
+
+        height: 330px;
+
+    }
+
+
+    .category-card {
+
+        height: 290px;
+
+    }
+
+
+    .cinematic-grid {
+
+        grid-auto-rows: 250px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<nav class="navbar">
+
+
+<a
+    href="#home"
+    class="logo">
+
+    STUDIO<span>13D</span>
+
+</a>
+
+
+<ul class="nav-links">
+
+<li>
+<a href="#categories">
+Services
+</a>
+</li>
+
+<li>
+<a href="#portfolio">
+Portfolio
+</a>
+</li>
+
+<li>
+<a href="#showreel">
+Showreel
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+<li>
+
+<a
+    href="https://wa.me/260975117662?text=Hello%2013D%20MEDIA%2C%20I%27d%20like%20to%20make%20a%20booking."
+    target="_blank"
+    rel="noopener"
+    class="nav-button">
+
+    WhatsApp Us
+
+</a>
+
+</li>
+
+</ul>
+
+
+<button
+    class="mobile-menu-button"
+    id="mobileMenuButton"
+    aria-label="Open menu">
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</nav>
+
+
+<!-- MOBILE NAVIGATION -->
+
+<div
+    class="mobile-navigation"
+    id="mobileNavigation">
+
+
+<a href="#home">
+Home
+</a>
+
+
+<a href="#categories">
+Services
+</a>
+
+
+<a href="#portfolio">
+Portfolio
+</a>
+
+
+<a href="#showreel">
+Showreel
+</a>
+
+
+<a href="#contact">
+Contact Us
+</a>
+
+
+<a
+    href="https://wa.me/260975117662?text=Hello%2013D%20MEDIA%2C%20I%27d%20like%20to%20make%20a%20booking."
+    target="_blank"
+    rel="noopener"
+    class="mobile-book">
+
+💬 Chat on WhatsApp
+
+</a>
+
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    class="hero"
+    id="home">
+
+<div class="hero-container">
+
+
+<div class="hero-content">
+
+
+<small>
+Photography & Videography Studio
+</small>
+
+
+<h1>
+We capture<br>
+what matters.
+</h1>
+
+
+<p>
+
+Professional photography and cinematic
+video production for conferences,
+weddings, brands, television and
+unforgettable moments.
+
+</p>
+
+
+<div class="hero-buttons">
+
+
+<a
+    href="#portfolio"
+    class="button button-gold">
+
+Explore Our Work
+
+</a>
+
+
+<a
+    href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20book%20a%20photo%20or%20video%20shoot."
+    target="_blank"
+    rel="noopener"
+    class="button button-outline">
+
+💬 WhatsApp Us
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+<div class="featured-visual">
+
+
+<img
+src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=90"
+alt="Professional camera">
+
+
+<div class="featured-overlay">
+
+<small>
+Featured Production
+</small>
+
+<h2>
+Stories in Every Frame.
+</h2>
+
+<p>
+Photography • Film • Production
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section
+    class="categories"
+    id="categories">
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<small>
+Our Specialties
+</small>
+
+<h2>
+Choose your story.
+</h2>
+
+<p>
+
+From major corporate events to
+intimate celebrations, commercial
+productions and immersive AR,
+we create visual experiences that
+leave an impact.
+
+</p>
+
+</div>
+
+
+
+<div class="category-grid">
+
+
+<!-- CONFERENCES -->
+
+<a
+href="#conferences"
+class="category-card">
+
+<img
+src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=85"
+alt="Conference photography">
+
+<div class="category-overlay">
+
+<div class="category-number">
+01
+</div>
+
+<h3>
+Conferences
+</h3>
+
+<p>
+Corporate events, conferences,
+launches and professional gatherings.
+</p>
+
+<span class="category-link">
+View Conference Work →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- WEDDINGS -->
+
+<a
+href="#weddings"
+class="category-card">
+
+<img
+src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+alt="Wedding photography">
+
+<div class="category-overlay">
+
+<div class="category-number">
+02
+</div>
+
+<h3>
+Weddings
+</h3>
+
+<p>
+Emotional moments, beautiful portraits
+and cinematic wedding films.
+</p>
+
+<span class="category-link">
+View Wedding Work →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- TVCs -->
+
+<a
+href="#tvcs"
+class="category-card">
+
+<img
+src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=85"
+alt="Film production">
+
+<div class="category-overlay">
+
+<div class="category-number">
+03
+</div>
+
+<h3>
+TVCs
+</h3>
+
+<p>
+Commercial campaigns, branded films
+and television productions.
+</p>
+
+<span class="category-link">
+View TVC Work →
+</span>
+
+</div>
+
+</a>
+
+
+
+<!-- AR -->
+
+<a
+href="#ar-experience"
+class="category-card">
+
+<img
+src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=900&q=85"
+alt="Augmented reality experience">
+
+<div class="category-overlay">
+
+<div class="category-number">
+04
+</div>
+
+<h3>
+AR Experience
+</h3>
+
+<p>
+Interactive augmented reality experiences
+for brands, campaigns and events.
+</p>
+
+<span class="category-link">
+Explore AR Experience →
+</span>
+
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PORTFOLIO
+===================================================== -->
+
+<section
+    class="portfolio"
+    id="portfolio">
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<small>
+Selected Work
+</small>
+
+<h2>
+Behind the lens.
+</h2>
+
+<p>
+
+Explore our photography, films,
+commercial productions and
+creative experiences.
+
+</p>
+
+</div>
+
+
+
+<!-- FILTERS -->
+
+<div class="filter-buttons">
+
+
+<button
+    class="filter-button active"
+    data-filter="all">
+
+All Work
+
+</button>
+
+
+<button
+    class="filter-button"
+    data-filter="conference">
+
+Conferences
+
+</button>
+
+
+<button
+    class="filter-button"
+    data-filter="wedding">
+
+Weddings
+
+</button>
+
+
+<button
+    class="filter-button"
+    data-filter="tvc">
+
+TVCs
+
+</button>
+
+
+<button
+    class="filter-button"
+    data-filter="ar">
+
+AR Experience
+
+</button>
+
+
+</div>
+
+
+
+<!-- CINEMATIC GRID -->
+
+<div
+    class="cinematic-grid"
+    id="portfolioGrid">
+
+
+
+<!-- CONFERENCE -->
+
+<div
+class="portfolio-item featured"
+data-category="conference"
+data-image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=90"
+data-title="Live Event Production">
+
+<img
+src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=90"
+alt="Live event production">
+
+<div class="portfolio-overlay">
+
+<span>
+CONFERENCES
+</span>
+
+<h3>
+Live Event Production
+</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- WEDDING -->
+
+<div
+class="portfolio-item"
+data-category="wedding"
+data-image="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90"
+data-title="Wedding Stories">
+
+<img
+src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90"
+alt="Wedding photography">
+
+<div class="portfolio-overlay">
+
+<span>
+WEDDINGS
+</span>
+
+<h3>
+Wedding Stories
+</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- TVC -->
+
+<div
+class="portfolio-item"
+data-category="tvc"
+data-video="https://www.youtube.com/embed/ScMzIvxBSi4">
+
+<img
+src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=1200&q=90"
+alt="Commercial film production">
+
+<div class="play-button">
+▶
+</div>
+
+<div class="portfolio-overlay">
+
+<span>
+TVC
+</span>
+
+<h3>
+Commercial Film
+</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- CONFERENCE -->
+
+<div
+class="portfolio-item"
+data-category="conference"
+data-image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=90"
+data-title="Corporate Stories">
+
+<img
+src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=90"
+alt="Corporate event">
+
+<div class="portfolio-overlay">
+
+<span>
+CONFERENCES
+</span>
+
+<h3>
+Corporate Stories
+</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- AR -->
+
+<div
+class="portfolio-item"
+data-category="ar"
+data-image="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1200&q=90"
+data-title="Interactive AR Experience">
+
+<img
+src="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1200&q=90"
+alt="Augmented reality experience">
+
+<div class="portfolio-overlay">
+
+<span>
+AR EXPERIENCE
+</span>
+
+<h3>
+Interactive AR Experience
+</h3>
+
+</div>
+
+</div>
+
+
+
+<!-- WEDDING VIDEO -->
+
+<div
+class="portfolio-item"
+data-category="wedding"
+data-video="https://www.youtube.com/embed/ScMzIvxBSi4">
+
+<img
+src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=90"
+alt="Wedding film">
+
+<div class="play-button">
+▶
+</div>
+
+<div class="portfolio-overlay">
+
+<span>
+WEDDING FILM
+</span>
+
+<h3>
+Cinematic Wedding Film
+</h3>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOWREEL
+===================================================== -->
+
+<section
+    class="showreel"
+    id="showreel">
+
+<div class="showreel-container">
+
+
+<div class="section-heading">
+
+<small>
+Studio Showreel
+</small>
+
+<h2>
+Watch our work.
+</h2>
+
+<p>
+
+A glimpse into the productions,
+stories and experiences we create.
+
+</p>
+
+</div>
+
+
+<div class="showreel-video">
+
+<div class="showreel-label">
+2026 SHOWREEL
+</div>
+
+
+<iframe
+src="https://www.youtube.com/embed/ScMzIvxBSi4"
+title="Studio Showreel"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONFERENCES
+===================================================== -->
+
+<section id="conferences">
+
+<div class="category-detail">
+
+<div class="section-heading">
+
+<small>
+Category 01
+</small>
+
+<h2>
+Conferences
+</h2>
+
+<p>
+
+Professional photography and video
+coverage for conferences, corporate
+events, launches and business gatherings.
+
+</p>
+
+</div>
+
+
+<div
+class="hero-buttons"
+style="justify-content:center;">
+
+<a
+href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20book%20conference%20photography%20or%20videography."
+target="_blank"
+rel="noopener"
+class="button button-gold">
+
+💬 WhatsApp Us
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WEDDINGS
+===================================================== -->
+
+<section
+id="weddings"
+class="services">
+
+<div class="category-detail">
+
+<div class="section-heading">
+
+<small>
+Category 02
+</small>
+
+<h2>
+Weddings
+</h2>
+
+<p>
+
+Your wedding day deserves to be remembered
+beautifully. We capture the emotions,
+people and moments that make your story unique.
+
+</p>
+
+</div>
+
+
+<div
+class="hero-buttons"
+style="justify-content:center;">
+
+<a
+href="https://wa.me/260975117662?text=Hello%2013D%20Media%2C%20I%27d%20like%20to%20enquire%20about%20wedding%20photography%20and%20videography."
+target="_blank"
+rel="noopener"
+class="button button-gold">
+
+💬 WhatsApp Us
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TVCs
+===================================================== -->
+
+<section id="tvcs">
+
+<div class="category-detail">
+
+<div class="section-heading">
+
+<small>
+Category 03
+</small>
+
+<h2>
+TVCs & Commercials
+</h2>
+
+<p>
+
+From concept development to filming
+and post-production, we produce cinematic
+commercial content designed to make
+brands stand out.
+
+</p>
+
+</div>
+
+
+<div
+class="hero-buttons"
+style="justify-content:center;">
+
+<a
+href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20discuss%20a%20TVC%20or%20commercial%20production."
+target="_blank"
+rel="noopener"
+class="button button-gold">
+
+💬 WhatsApp Us
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AR EXPERIENCE
+===================================================== -->
+
+<section
+id="ar-experience"
+class="services">
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<small>
+Category 04
+</small>
+
+<h2>
+AR Experience
+</h2>
+
+<p>
+
+Take your audience beyond traditional
+photography and video with interactive
+augmented reality experiences for
+campaigns, events, products and brands.
+
+</p>
+
+</div>
+
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">
+◎
+</div>
+
+<h3>
+AR Campaigns
+</h3>
+
+<p>
+
+Interactive branded experiences that
+allow audiences to engage with your
+campaigns in completely new ways.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-icon">
+✦
+</div>
+
+<h3>
+Product AR
+</h3>
+
+<p>
+
+Let customers visualize products,
+spaces and experiences using
+augmented reality.
+
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="card-icon">
+◈
+</div>
+
+<h3>
+Event AR
+</h3>
+
+<p>
+
+Create memorable interactive
+experiences for exhibitions,
+launches and live events.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<div
+class="hero-buttons"
+style="justify-content:center; margin-top:22px;">
+
+<a
+href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20discuss%20an%20AR%20Experience."
+target="_blank"
+rel="noopener"
+class="button button-gold">
+
+💬 Create an AR Experience
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOOKING
+===================================================== -->
+
+<section
+class="booking"
+id="booking">
+
+<div class="section-container">
+
+<div class="section-heading">
+
+<small>
+Let's Create
+</small>
+
+<h2>
+Have a story to tell?
+</h2>
+
+<p>
+
+Tell us about your project and
+let's create something worth
+remembering.
+
+</p>
+
+</div>
+
+
+<a
+href="https://wa.me/260975117662?text=Hello%2013D%20Media%2C%20I%27d%20like%20to%20make%20a%20booking."
+target="_blank"
+rel="noopener"
+class="button">
+
+💬 Chat on WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section id="contact">
+
+<div class="section-container">
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h2>
+Let's create.
+</h2>
+
+<p>
+
+Have an event, wedding,
+commercial or creative project
+coming up? Let's talk.
+
+</p>
+
+
+<div class="contact-details">
+
+
+<div class="contact-item">
+
+<strong>
+WhatsApp
+</strong>
+
+<span>
++260 975 117 662
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+Email
+</strong>
+
+<span>
+13dmediazambia@gmail.com
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+Studio
+</strong>
+
+<span>
+Your City, Zambia
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<form
+class="contact-form"
+action="mailto:13dmediazambia@gmail.com"
+method="post"
+enctype="text/plain">
+
+
+<input
+type="text"
+name="name"
+placeholder="Your Name"
+required>
+
+
+<input
+type="email"
+name="email"
+placeholder="Email Address"
+required>
+
+
+<input
+type="text"
+name="project"
+placeholder="Project Type">
+
+
+<textarea
+name="message"
+placeholder="Tell us about your project..."
+required>
+</textarea>
+
+
+<button
+type="submit"
+class="button button-gold">
+
+Send Enquiry
+
+</button>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+© 2026 13D MEDIA.
+All rights reserved.
+
+</footer>
+
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+class="lightbox"
+id="lightbox">
+
+
+<button
+class="lightbox-close"
+id="lightboxClose"
+aria-label="Close image">
+
+×
+
+</button>
+
+
+<img
+class="lightbox-image"
+id="lightboxImage"
+src=""
+alt="">
+
+
+<div
+class="lightbox-caption"
+id="lightboxCaption">
+</div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuButton =
+document.getElementById(
+    "mobileMenuButton"
+);
+
+
+const mobileNavigation =
+document.getElementById(
+    "mobileNavigation"
+);
+
+
+menuButton.addEventListener(
+    "click",
+    function() {
+
+        mobileNavigation.classList.toggle(
+            "active"
+        );
+
+    }
+);
+
+
+mobileNavigation
+.querySelectorAll("a")
+.forEach(function(link) {
+
+    link.addEventListener(
+        "click",
+        function() {
+
+            mobileNavigation.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =====================================================
+   PORTFOLIO FILTER
+===================================================== */
+
+const filterButtons =
+document.querySelectorAll(
+    ".filter-button"
+);
+
+
+const portfolioItems =
+document.querySelectorAll(
+    ".portfolio-item"
+);
+
+
+filterButtons.forEach(function(button) {
+
+
+    button.addEventListener(
+        "click",
+        function() {
+
+
+            filterButtons.forEach(
+                function(btn) {
+
+                    btn.classList.remove(
+                        "active"
+                    );
+
+                }
+            );
+
+
+            button.classList.add(
+                "active"
+            );
+
+
+            const filter =
+                button.dataset.filter;
+
+
+            portfolioItems.forEach(
+                function(item) {
+
+
+                    if (
+                        filter === "all" ||
+                        item.dataset.category === filter
+                    ) {
+
+                        item.style.display = "block";
+
+                    }
+
+                    else {
+
+                        item.style.display = "none";
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+const lightbox =
+document.getElementById(
+    "lightbox"
+);
+
+
+const lightboxImage =
+document.getElementById(
+    "lightboxImage"
+);
+
+
+const lightboxCaption =
+document.getElementById(
+    "lightboxCaption"
+);
+
+
+const lightboxClose =
+document.getElementById(
+    "lightboxClose"
+);
+
+
+portfolioItems.forEach(
+function(item) {
+
+
+    item.addEventListener(
+        "click",
+        function() {
+
+
+            /*
+               VIDEO PROJECT
+            */
+
+            if (item.dataset.video) {
+
+                window.open(
+                    item.dataset.video,
+                    "_blank"
+                );
+
+                return;
+
+            }
+
+
+            /*
+               IMAGE PROJECT
+            */
+
+            const image =
+                item.dataset.image;
+
+
+            const title =
+                item.dataset.title;
+
+
+            if (!image) return;
+
+
+            lightboxImage.src =
+                image;
+
+
+            lightboxCaption.textContent =
+                title || "";
+
+
+            lightbox.classList.add(
+                "active"
+            );
+
+
+            document.body.classList.add(
+                "lightbox-open"
+            );
+
+        }
+    );
+
+});
+
+
+
+/* =====================================================
+   CLOSE LIGHTBOX
+===================================================== */
+
+function closeLightbox() {
+
+    lightbox.classList.remove(
+        "active"
+    );
+
+    document.body.classList.remove(
+        "lightbox-open"
+    );
+
+    lightboxImage.src = "";
+
+}
+
+
+lightboxClose.addEventListener(
+    "click",
+    closeLightbox
+);
+
+
+lightbox.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target === lightbox
+        ) {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   ESC KEY
+===================================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape"
+        ) {
+
+            closeLightbox();
+
+        }
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
