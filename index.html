@@ -1,1 +1,2144 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"> <meta name="theme-color" content="#202020"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <title>YOUR BRAND | AR Experience</title> <!-- ========================================= GOOGLE FONT ========================================== --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> <!-- ========================================= STYLES ========================================== --> <style> /* ========================================= VARIABLES ========================================== */ :root { --black: #0d0d0d; --dark: #151515; --dark-grey: #202020; --medium-grey: #292929; --gray: #a7a7a7; --light-gray: #d7d7d7; --border: #383838; --white: #ffffff; --gold: #c89b3c; --gold-light: #ddb14e; --radius: 20px; --max-width: 1200px; } /* ========================================= RESET ========================================== */ * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { font-family: "Inter", sans-serif; background: var(--dark-grey); color: var(--white); line-height: 1.6; overflow-x: hidden; } body.menu-open { overflow: hidden; } a { text-decoration: none; color: inherit; } img { display: block; max-width: 100%; } button { font-family: inherit; } /* ========================================= NAVIGATION ========================================== */ header { position: sticky; top: 0; z-index: 9999; background: rgba(25,25,25,0.94); backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.08); } .navbar { width: 100%; max-width: var(--max-width); height: 78px; margin: auto; padding: 0 25px; display: flex; align-items: center; justify-content: space-between; } .logo { font-size: 21px; font-weight: 800; letter-spacing: -0.5px; color: white; white-space: nowrap; } .logo span { color: var(--gold); } /* ========================================= DESKTOP NAVIGATION ========================================== */ .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; } .nav-links a { font-size: 14px; font-weight: 600; color: #cccccc; transition: 0.25s ease; } .nav-links a:hover { color: var(--gold); } .nav-button { padding: 11px 20px; border-radius: 30px; background: var(--gold); color: #111111 !important; } .nav-button:hover { background: var(--gold-light); } /* ========================================= MOBILE MENU BUTTON ========================================== */ .mobile-menu-button { display: none; width: 44px; height: 44px; border: 1px solid var(--border); border-radius: 12px; background: var(--medium-grey); cursor: pointer; align-items: center; justify-content: center; flex-direction: column; gap: 5px; } .mobile-menu-button span { width: 20px; height: 2px; background: white; transition: 0.25s; } /* ========================================= MOBILE NAVIGATION ========================================== */ .mobile-navigation { display: none; position: fixed; inset: 78px 0 0 0; z-index: 9998; background: rgba(25,25,25,0.99); padding: 35px 25px; } .mobile-navigation.active { display: block; } .mobile-navigation a { display: block; padding: 18px 0; border-bottom: 1px solid var(--border); font-size: 20px; font-weight: 700; color: white; } .mobile-navigation .mobile-book { margin-top: 25px; padding: 17px; text-align: center; border: none; border-radius: 12px; background: var(--gold); color: #111111; } /* ========================================= HERO ========================================== */ .hero { min-height: calc(100vh - 78px); display: flex; align-items: center; background: radial-gradient( circle at 75% 40%, #333333 0%, #252525 30%, #202020 65%, #1c1c1c 100% ); } .hero-container { width: 100%; max-width: var(--max-width); margin: auto; padding: 80px 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; } /* ========================================= HERO CONTENT ========================================== */ .hero-content small { display: inline-block; margin-bottom: 18px; color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; } .hero-content h1 { font-size: clamp(44px, 6vw, 76px); line-height: 1.02; letter-spacing: -3px; margin-bottom: 25px; color: white; } .hero-content p { max-width: 520px; color: var(--gray); font-size: 17px; line-height: 1.8; margin-bottom: 35px; } .hero-buttons { display: flex; gap: 14px; flex-wrap: wrap; } /* ========================================= STANDARD BUTTONS ========================================== */ .button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 14px 24px; border-radius: 30px; font-size: 14px; font-weight: 700; transition: 0.25s ease; } .button-dark { background: var(--gold); color: #111111; } .button-dark:hover { background: var(--gold-light); transform: translateY(-2px); } .button-light { background: transparent; border: 1px solid #555555; color: white; } .button-light:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); } /* ========================================= AR EXPERIENCE CARD ========================================== */ .ar-container { position: relative; min-height: 540px; border-radius: 28px; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; padding: 45px; background: radial-gradient( circle at center, #3c3c3c 0%, #292929 50%, #1b1b1b 100% ); border: 1px solid #3d3d3d; box-shadow: 0 30px 80px rgba(0,0,0,0.45); } .ar-content { position: relative; z-index: 2; width: 100%; } .ar-icon { width: 95px; height: 95px; margin: 0 auto 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 42px; background: rgba(200,155,60,0.12); border: 1px solid rgba(200,155,60,0.35); box-shadow: 0 0 50px rgba(200,155,60,0.08); } .ar-content h2 { font-size: 32px; margin-bottom: 14px; letter-spacing: -1px; } .ar-content p { max-width: 430px; margin: 0 auto 30px; color: var(--gray); font-size: 15px; } /* ========================================= QUICK LOOK AR BUTTON ========================================== */ .ar-button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; padding: 16px 28px; border-radius: 30px; background: var(--gold); color: #111111; font-size: 15px; font-weight: 800; box-shadow: 0 12px 30px rgba(0,0,0,0.3); transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease; } .ar-button:hover { background: var(--gold-light); transform: translateY(-3px); box-shadow: 0 16px 35px rgba(0,0,0,0.4); } .ar-button:active { transform: scale(0.97); } .ar-note { margin-top: 18px; font-size: 11px; color: #777777; } /* ========================================= DECORATIVE AR CIRCLES ========================================== */ .ar-circle { position: absolute; border-radius: 50%; border: 1px solid rgba(255,255,255,0.06); pointer-events: none; } .ar-circle.one { width: 350px; height: 350px; } .ar-circle.two { width: 500px; height: 500px; } .ar-circle.three { width: 650px; height: 650px; } /* ========================================= SECTIONS ========================================== */ section { padding: 100px 25px; background: var(--dark-grey); } .section-container { max-width: 1100px; margin: auto; } .section-heading { text-align: center; margin-bottom: 55px; } .section-heading small { color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; } .section-heading h2 { margin-top: 10px; font-size: clamp(32px, 5vw, 48px); letter-spacing: -2px; color: white; } .section-heading p { max-width: 600px; margin: 15px auto 0; color: var(--gray); } /* ========================================= SERVICE CARDS ========================================== */ .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; } .card { padding: 35px; border: 1px solid var(--border); border-radius: var(--radius); background: #252525; transition: 0.25s ease; } .card:hover { transform: translateY(-5px); border-color: #4a4a4a; box-shadow: 0 20px 45px rgba(0,0,0,0.3); } .card-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; border-radius: 14px; background: #333333; color: var(--gold); font-size: 21px; } .card h3 { margin-bottom: 10px; font-size: 19px; color: white; } .card p { color: var(--gray); font-size: 14px; } /* ========================================= SAMPLES ========================================== */ .samples { background: #181818; } .sample-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; } .sample { height: 260px; overflow: hidden; position: relative; border-radius: 18px; background: #252525; border: 1px solid #333333; } .sample img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s ease; } .sample:hover img { transform: scale(1.05); } .sample-overlay { position: absolute; inset: auto 0 0 0; padding: 25px; color: white; background: linear-gradient( transparent, rgba(0,0,0,0.9) ); } .sample-overlay h3 { font-size: 18px; } /* ========================================= BOOKING ========================================== */ .booking { text-align: center; background: linear-gradient( 135deg, #111111, #252525 ); } .booking .section-heading p { color: #999999; } .booking .button { background: var(--gold); color: #111111; } /* ========================================= CONTACT ========================================== */ .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; } .contact-info h2 { font-size: 40px; letter-spacing: -1.5px; margin-bottom: 15px; } .contact-info > p { color: var(--gray); margin-bottom: 30px; } .contact-details { display: grid; gap: 18px; } .contact-item { padding: 18px; border: 1px solid var(--border); border-radius: 14px; background: #252525; } .contact-item strong { display: block; font-size: 13px; margin-bottom: 3px; } .contact-item span { color: var(--gray); font-size: 14px; } /* ========================================= CONTACT FORM ========================================== */ .contact-form { display: grid; gap: 15px; } .contact-form input, .contact-form textarea { width: 100%; padding: 15px 17px; border: 1px solid var(--border); border-radius: 10px; background: #252525; color: white; font-family: inherit; font-size: 14px; outline: none; } .contact-form input::placeholder, .contact-form textarea::placeholder { color: #777777; } .contact-form textarea { height: 150px; resize: vertical; } .contact-form input:focus, .contact-form textarea:focus { border-color: var(--gold); } .contact-form button { border: none; cursor: pointer; } /* ========================================= FOOTER ========================================== */ footer { padding: 30px 25px; background: #111111; border-top: 1px solid var(--border); text-align: center; color: #777777; font-size: 13px; } /* ========================================= TABLET ========================================== */ @media (max-width: 900px) { .hero-container { grid-template-columns: 1fr; gap: 45px; } .hero-content { text-align: center; } .hero-content p { margin-left: auto; margin-right: auto; } .hero-buttons { justify-content: center; } .ar-container { min-height: 500px; } .cards { grid-template-columns: 1fr; } .sample-grid { grid-template-columns: repeat(2, 1fr); } .contact-grid { grid-template-columns: 1fr; gap: 45px; } } /* ========================================= MOBILE ========================================== */ @media (max-width: 600px) { header { position: fixed; top: 0; left: 0; right: 0; } .navbar { height: 68px; padding: 0 18px; } .nav-links { display: none; } .mobile-menu-button { display: flex; } .mobile-navigation { inset: 68px 0 0 0; overflow-y: auto; } /* HERO */ .hero { min-height: auto; padding-top: 68px; } .hero-container { padding: 50px 16px 40px; gap: 30px; } .hero-content small { margin-bottom: 14px; font-size: 10px; letter-spacing: 1.6px; } .hero-content h1 { font-size: 45px; letter-spacing: -2.5px; margin-bottom: 18px; } .hero-content p { font-size: 15px; line-height: 1.7; margin-bottom: 25px; } .hero-buttons { width: 100%; flex-direction: column; gap: 10px; } .hero-buttons .button { width: 100%; } /* AR CARD */ .ar-container { min-height: 430px; padding: 30px 20px; border-radius: 20px; } .ar-icon { width: 80px; height: 80px; font-size: 34px; margin-bottom: 25px; } .ar-content h2 { font-size: 27px; } .ar-content p { font-size: 14px; line-height: 1.7; } .ar-button { width: 100%; min-height: 58px; border-radius: 14px; font-size: 15px; } .ar-circle.one { width: 250px; height: 250px; } .ar-circle.two { width: 350px; height: 350px; } .ar-circle.three { width: 450px; height: 450px; } /* SECTIONS */ section { padding: 70px 18px; } .section-heading { margin-bottom: 35px; } .section-heading h2 { font-size: 34px; letter-spacing: -1.5px; } .section-heading p { font-size: 14px; } /* CARDS */ .card { padding: 25px; border-radius: 16px; } /* SAMPLES */ .sample-grid { grid-template-columns: 1fr; gap: 15px; } .sample { height: 240px; border-radius: 15px; } /* BOOKING */ .booking .button { width: 100%; min-height: 55px; } /* CONTACT */ .contact-info h2 { font-size: 35px; } .contact-form input, .contact-form textarea { font-size: 16px; padding: 16px; } .contact-form button { width: 100%; min-height: 55px; } /* FOOTER */ footer { padding: 25px 18px; font-size: 12px; } } /* ========================================= VERY SMALL PHONES ========================================== */ @media (max-width: 380px) { .hero-content h1 { font-size: 40px; } .ar-container { min-height: 400px; } .ar-content h2 { font-size: 24px; } } /* ========================================= LANDSCAPE PHONES ========================================== */ @media screen and (max-width: 900px) and (orientation: landscape) { .ar-container { min-height: 80vh; } } /* ========================================= REDUCE MOTION ========================================== */ @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; animation: none !important; } } </style> </head> <body> <!-- ========================================= HEADER ========================================== --> <header> <nav class="navbar"> <a href="#" class="logo"> AR<span>13</span> </a> <!-- DESKTOP NAVIGATION --> <ul class="nav-links"> <li> <a href="#samples"> Samples </a> </li> <li> <a href="#contact"> Contact </a> </li> <li> <a href="#booking" class="nav-button"> Book Now </a> </li> </ul> <!-- MOBILE MENU --> <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Open navigation menu" aria-expanded="false"> <span></span> <span></span> <span></span> </button> </nav> <!-- MOBILE NAVIGATION --> <div class="mobile-navigation" id="mobileNavigation"> <a href="#home"> Home </a> <a href="#samples"> Samples </a> <a href="#booking"> Bookings </a> <a href="#contact"> Contact Us </a> <a href="https://example.com/bookings" target="_blank" rel="noopener" class="mobile-book"> 📅 Book Now </a> </div> </header> <!-- ========================================= MAIN ========================================== --> <main> <!-- ======================================= HERO ======================================== --> <section class="hero" id="home"> <div class="hero-container"> <!-- HERO TEXT --> <div class="hero-content"> <small> Augmented Reality Experience </small> <h1> See it.<br> In your space. </h1> <p> Experience our product in augmented reality. Tap the button to view the model directly in your environment. </p> <div class="hero-buttons"> <a href="#ar" class="button button-dark"> View in AR </a> <a href="#samples" class="button button-light"> View Samples </a> </div> </div> <!-- ================================= AR EXPERIENCE ================================== --> <div class="ar-container" id="ar"> <!-- Decorative circles --> <div class="ar-circle one"> </div> <div class="ar-circle two"> </div> <div class="ar-circle three"> </div> <!-- AR CONTENT --> <div class="ar-content"> <div class="ar-icon"> 📱 </div> <h2> View This in Your Space </h2> <p> Use your iPhone or iPad to place this 3D model into your real environment using Apple Quick Look. </p> <!-- ================================= APPLE QUICK LOOK AR LINK ================================== --> <a rel="ar" href="model.usdz" class="ar-button"> 📱 View in AR </a> <div class="ar-note"> Requires a compatible iPhone or iPad </div> </div> </div> </div> </section> <!-- ======================================= SERVICES ======================================== --> <section> <div class="section-container"> <div class="section-heading"> <small> What We Offer </small> <h2> Experience the difference. </h2> <p> Explore our products through augmented reality and discover how they look in your space. </p> </div> <div class="cards"> <div class="card"> <div class="card-icon"> ✦ </div> <h3> Augmented Reality </h3> <p> View our products directly in your environment using Apple's Quick Look technology. </p> </div> <div class="card"> <div class="card-icon"> ◈ </div> <h3> Interactive Experience </h3> <p> Experience products in a completely new way before making your decision. </p> </div> <div class="card"> <div class="card-icon"> ◆ </div> <h3> Professional Service </h3> <p> Contact our team to discuss your project, requirements and booking. </p> </div> </div> </div> </section> <!-- ======================================= SAMPLES ======================================== --> <section class="samples" id="samples"> <div class="section-container"> <div class="section-heading"> <small> Our Work </small> <h2> Samples & Projects </h2> <p> Explore some of our previous projects and creative work. </p> </div> <div class="sample-grid"> <a href="13d.usdz" class="sample"> <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80" alt="Modern furniture sample"> <div class="sample-overlay"> <h3> Project One </h3> </div> </a> <a href="model.usdz" class="sample"> <img src="https://images.unsplash.com/photo-1550226891-ef816aed4a98?auto=format&fit=crop&w=900&q=80" alt="Interior design sample"> <div class="sample-overlay"> <h3> Project Two </h3> </div> </a> <a href="og.usdz" class="sample"> <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=900&q=80" alt="Modern chair sample"> <div class="sample-overlay"> <h3> Project Three </h3> </div> </a> </div> </div> </section> <!-- ======================================= BOOKING ======================================== --> <section class="booking" id="booking"> <div class="section-container"> <div class="section-heading"> <small> Let's Work Together </small> <h2> Ready to get started? </h2> <p> Book a consultation or request more information about our services. </p> </div> <!-- CHANGE THIS URL --> <a href="https://example.com/bookings" target="_blank" rel="noopener" class="button"> 📅 Book Now </a> </div> </section> <!-- ======================================= CONTACT ======================================== --> <section id="contact"> <div class="section-container"> <div class="contact-grid"> <div class="contact-info"> <h2> Let's talk. </h2> <p> Have a question, project idea or need more information? Send us a message. </p> <div class="contact-details"> <div class="contact-item"> <strong> Email </strong> <span> hello@yourbrand.com </span> </div> <div class="contact-item"> <strong> Phone </strong> <span> +260 000 000 000 </span> </div> <div class="contact-item"> <strong> Location </strong> <span> Your City, Zambia </span> </div> </div> </div> <!-- CONTACT FORM --> <form class="contact-form" action="mailto:hello@yourbrand.com" method="post" enctype="text/plain"> <input type="text" name="name" placeholder="Your Name" autocomplete="name" required> <input type="email" name="email" placeholder="Email Address" autocomplete="email" required> <input type="text" name="subject" placeholder="Subject"> <textarea name="message" placeholder="Tell us about your project..." required></textarea> <button type="submit" class="button button-dark"> Send Message </button> </form> </div> </div> </section> </main> <!-- ========================================= FOOTER ========================================== --> <footer> © 2026 Studio 13D Media. All rights reserved. </footer> <!-- ========================================= JAVASCRIPT ========================================== --> <script> /* ========================================= MOBILE MENU ========================================== */ const menuButton = document.getElementById( "mobileMenuButton" ); const mobileNavigation = document.getElementById( "mobileNavigation" ); menuButton.addEventListener( "click", function () { const isOpen = mobileNavigation.classList.toggle( "active" ); document.body.classList.toggle( "menu-open", isOpen ); menuButton.setAttribute( "aria-expanded", isOpen ); } ); /* ========================================= CLOSE MOBILE MENU ========================================== */ const mobileLinks = mobileNavigation.querySelectorAll( "a" ); mobileLinks.forEach( function (link) { link.addEventListener( "click", function () { mobileNavigation.classList.remove( "active" ); document.body.classList.remove( "menu-open" ); menuButton.setAttribute( "aria-expanded", "false" ); } ); } ); /* ========================================= DEVICE DETECTION ========================================== */ function detectDevice() { const isMobile = window.matchMedia( "(max-width: 600px)" ).matches; if (isMobile) { document.body.classList.add( "mobile-device" ); } else { document.body.classList.remove( "mobile-device" ); } } detectDevice(); window.addEventListener( "resize", detectDevice ); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<meta name="theme-color" content="#202020">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<title>YOUR BRAND | AR Experience</title>
+
+<!-- =========================================================
+     GOOGLE FONT
+========================================================= -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
+
+<!-- =========================================================
+     STYLES
+========================================================= -->
+<style>
+
+:root {
+    --black: #0d0d0d;
+    --dark: #151515;
+    --dark-grey: #202020;
+    --medium-grey: #292929;
+
+    --gray: #a7a7a7;
+    --light-gray: #d7d7d7;
+
+    --border: #383838;
+
+    --white: #ffffff;
+
+    --gold: #c89b3c;
+    --gold-light: #ddb14e;
+
+    --radius: 20px;
+
+    --max-width: 1200px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--dark-grey);
+    color: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    background: rgba(25,25,25,0.94);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar {
+    width: 100%;
+    max-width: var(--max-width);
+
+    height: 78px;
+
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+
+    color: white;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #cccccc;
+
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-button {
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    background: var(--gold);
+
+    color: #111111 !important;
+}
+
+.nav-button:hover {
+    background: var(--gold-light);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+    background: var(--medium-grey);
+
+    cursor: pointer;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.mobile-menu-button span {
+    width: 20px;
+    height: 2px;
+
+    background: white;
+
+    transition: 0.25s;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-navigation {
+    display: none;
+
+    position: fixed;
+
+    inset: 78px 0 0 0;
+
+    z-index: 9998;
+
+    background: rgba(25,25,25,0.99);
+
+    padding: 35px 25px;
+}
+
+.mobile-navigation.active {
+    display: block;
+}
+
+.mobile-navigation a {
+    display: block;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    color: white;
+}
+
+.mobile-navigation .mobile-book {
+    margin-top: 25px;
+
+    padding: 17px;
+
+    text-align: center;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--gold);
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 78px);
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 75% 40%,
+            #333333 0%,
+            #252525 30%,
+            #202020 65%,
+            #1c1c1c 100%
+        );
+}
+
+.hero-container {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin: auto;
+
+    padding: 80px 25px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content small {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: clamp(44px, 6vw, 76px);
+
+    line-height: 1.02;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+    color: white;
+}
+
+.hero-content p {
+    max-width: 520px;
+
+    color: var(--gray);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   STANDARD BUTTONS
+========================================================= */
+
+.button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 14px 24px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.25s ease;
+}
+
+.button-dark {
+    background: var(--gold);
+
+    color: #111111;
+}
+
+.button-dark:hover {
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+}
+
+.button-light {
+    background: transparent;
+
+    border: 1px solid #555555;
+
+    color: white;
+}
+
+.button-light:hover {
+    border-color: var(--gold);
+
+    color: var(--gold);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   AR EXPERIENCE CARD
+========================================================= */
+
+.ar-container {
+    position: relative;
+
+    min-height: 540px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 45px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3c3c3c 0%,
+            #292929 50%,
+            #1b1b1b 100%
+        );
+
+    border: 1px solid #3d3d3d;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.45);
+}
+
+.ar-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+}
+
+.ar-icon {
+    width: 95px;
+    height: 95px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+
+    background: rgba(200,155,60,0.12);
+
+    border: 1px solid rgba(200,155,60,0.35);
+
+    box-shadow:
+        0 0 50px rgba(200,155,60,0.08);
+}
+
+.ar-content h2 {
+    font-size: 32px;
+
+    margin-bottom: 14px;
+
+    letter-spacing: -1px;
+}
+
+.ar-content p {
+    max-width: 430px;
+
+    margin: 0 auto 30px;
+
+    color: var(--gray);
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   AR BUTTONS
+========================================================= */
+
+.ar-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 56px;
+
+    padding: 16px 28px;
+
+    border-radius: 30px;
+
+    background: var(--gold);
+
+    color: #111111;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.3);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.ar-button:hover {
+    background: var(--gold-light);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(0,0,0,0.4);
+}
+
+.ar-button:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+   ANDROID AR BUTTON
+========================================================= */
+
+.android-ar-button {
+    margin-top: 12px;
+
+    background: #ffffff;
+
+    color: #111111;
+}
+
+.android-ar-button:hover {
+    background: #eeeeee;
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   AR NOTES
+========================================================= */
+
+.ar-note {
+    margin-top: 18px;
+
+    font-size: 11px;
+
+    color: #777777;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   DECORATIVE AR CIRCLES
+========================================================= */
+
+.ar-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.06);
+
+    pointer-events: none;
+}
+
+.ar-circle.one {
+    width: 350px;
+    height: 350px;
+}
+
+.ar-circle.two {
+    width: 500px;
+    height: 500px;
+}
+
+.ar-circle.three {
+    width: 650px;
+    height: 650px;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+    padding: 100px 25px;
+
+    background: var(--dark-grey);
+}
+
+.section-container {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 55px;
+}
+
+.section-heading small {
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin-top: 10px;
+
+    font-size: clamp(32px, 5vw, 48px);
+
+    letter-spacing: -2px;
+
+    color: white;
+}
+
+.section-heading p {
+    max-width: 600px;
+
+    margin: 15px auto 0;
+
+    color: var(--gray);
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.card {
+    padding: 35px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: #252525;
+
+    transition: 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    border-color: #4a4a4a;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.3);
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 14px;
+
+    background: #333333;
+
+    color: var(--gold);
+
+    font-size: 21px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+
+    font-size: 19px;
+
+    color: white;
+}
+
+.card p {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   SAMPLES
+========================================================= */
+
+.samples {
+    background: #181818;
+}
+
+.sample-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.sample {
+    height: 260px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    border-radius: 18px;
+
+    background: #252525;
+
+    border: 1px solid #333333;
+}
+
+.sample img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s ease;
+}
+
+.sample:hover img {
+    transform: scale(1.05);
+}
+
+.sample-overlay {
+    position: absolute;
+
+    inset: auto 0 0 0;
+
+    padding: 25px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.9)
+        );
+}
+
+.sample-overlay h3 {
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   BOOKING
+========================================================= */
+
+.booking {
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #252525
+        );
+}
+
+.booking .section-heading p {
+    color: #999999;
+}
+
+.booking .button {
+    background: var(--gold);
+
+    color: #111111;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-size: 40px;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: var(--gray);
+
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: grid;
+
+    gap: 18px;
+}
+
+.contact-item {
+    padding: 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: #252525;
+}
+
+.contact-item strong {
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 3px;
+}
+
+.contact-item span {
+    color: var(--gray);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+.contact-form {
+    display: grid;
+
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 15px 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: #252525;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #777777;
+}
+
+.contact-form textarea {
+    height: 150px;
+
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--gold);
+}
+
+.contact-form button {
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 30px 25px;
+
+    background: #111111;
+
+    border-top: 1px solid var(--border);
+
+    text-align: center;
+
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .ar-container {
+        min-height: 500px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sample-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar {
+        height: 68px;
+
+        padding: 0 18px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu-button {
+        display: flex;
+    }
+
+    .mobile-navigation {
+        inset: 68px 0 0 0;
+
+        overflow-y: auto;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 68px;
+    }
+
+    .hero-container {
+        padding: 50px 16px 40px;
+
+        gap: 30px;
+    }
+
+    .hero-content small {
+        margin-bottom: 14px;
+
+        font-size: 10px;
+
+        letter-spacing: 1.6px;
+    }
+
+    .hero-content h1 {
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+
+        margin-bottom: 18px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+    }
+
+
+    /* AR CARD */
+
+    .ar-container {
+        min-height: 470px;
+
+        padding: 30px 20px;
+
+        border-radius: 20px;
+    }
+
+    .ar-icon {
+        width: 80px;
+        height: 80px;
+
+        font-size: 34px;
+
+        margin-bottom: 25px;
+    }
+
+    .ar-content h2 {
+        font-size: 27px;
+    }
+
+    .ar-content p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .ar-button {
+        width: 100%;
+
+        min-height: 58px;
+
+        border-radius: 14px;
+
+        font-size: 15px;
+    }
+
+    .ar-circle.one {
+        width: 250px;
+        height: 250px;
+    }
+
+    .ar-circle.two {
+        width: 350px;
+        height: 350px;
+    }
+
+    .ar-circle.three {
+        width: 450px;
+        height: 450px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 70px 18px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+    }
+
+
+    /* CARDS */
+
+    .card {
+        padding: 25px;
+
+        border-radius: 16px;
+    }
+
+
+    /* SAMPLES */
+
+    .sample-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .sample {
+        height: 240px;
+
+        border-radius: 15px;
+    }
+
+
+    /* BOOKING */
+
+    .booking .button {
+        width: 100%;
+
+        min-height: 55px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-info h2 {
+        font-size: 35px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 16px;
+
+        padding: 16px;
+    }
+
+    .contact-form button {
+        width: 100%;
+
+        min-height: 55px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 25px 18px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .ar-container {
+        min-height: 430px;
+    }
+
+    .ar-content h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONES
+========================================================= */
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+
+    .ar-container {
+        min-height: 80vh;
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        scroll-behavior: auto !important;
+
+        transition: none !important;
+
+        animation: none !important;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<nav class="navbar">
+
+<a href="#" class="logo">
+    AR<span>13</span>
+</a>
+
+
+<!-- DESKTOP NAVIGATION -->
+
+<ul class="nav-links">
+
+<li>
+    <a href="#samples">
+        Samples
+    </a>
+</li>
+
+<li>
+    <a href="#contact">
+        Contact
+    </a>
+</li>
+
+<li>
+    <a href="#booking" class="nav-button">
+        Book Now
+    </a>
+</li>
+
+</ul>
+
+
+<!-- MOBILE MENU -->
+
+<button
+    class="mobile-menu-button"
+    id="mobileMenuButton"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+>
+
+<span></span>
+<span></span>
+<span></span>
+
+</button>
+
+</nav>
+
+
+<!-- MOBILE NAVIGATION -->
+
+<div
+    class="mobile-navigation"
+    id="mobileNavigation"
+>
+
+<a href="#home">
+    Home
+</a>
+
+<a href="#samples">
+    Samples
+</a>
+
+<a href="#booking">
+    Bookings
+</a>
+
+<a href="#contact">
+    Contact Us
+</a>
+
+<a
+    href="https://wa.me/260975117662"
+    target="_blank"
+    rel="noopener"
+    class="mobile-book"
+>
+    💬 Chat on WhatsApp
+</a>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+
+<!-- HERO TEXT -->
+
+<div class="hero-content">
+
+<small>
+    Augmented Reality Experience
+</small>
+
+<h1>
+    See it.<br>
+    In your space.
+</h1>
+
+<p>
+    Experience our product in augmented reality.
+    Tap the button to view the model directly in
+    your environment.
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+    href="#ar"
+    class="button button-dark"
+>
+    View in AR
+</a>
+
+<a
+    href="#samples"
+    class="button button-light"
+>
+    View Samples
+</a>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     AR EXPERIENCE
+========================================================= -->
+
+<div
+    class="ar-container"
+    id="ar"
+>
+
+
+<!-- Decorative circles -->
+
+<div class="ar-circle one"></div>
+<div class="ar-circle two"></div>
+<div class="ar-circle three"></div>
+
+
+<!-- AR CONTENT -->
+
+<div class="ar-content">
+
+
+<div class="ar-icon">
+    📱
+</div>
+
+
+<h2>
+    View This in Your Space
+</h2>
+
+
+<p>
+    Choose your device below to place this
+    3D model directly into your real environment.
+</p>
+
+
+<!-- =========================================================
+     APPLE QUICK LOOK
+========================================================= -->
+
+<a
+    rel="ar"
+    href="model.usdz"
+    class="ar-button"
+>
+    🍎 View in AR
+</a>
+
+
+<!-- =========================================================
+     ANDROID SCENE VIEWER
+========================================================= -->
+
+<a
+    id="androidARButton"
+    href="#"
+    class="ar-button android-ar-button"
+>
+    🤖 View in AR on Android
+</a>
+
+
+<div class="ar-note">
+
+    <strong>iPhone / iPad:</strong>
+    Apple Quick Look
+    <br>
+
+    <strong>Android:</strong>
+    Google ARCore / Scene Viewer
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section>
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<small>
+    What We Offer
+</small>
+
+<h2>
+    Experience the difference.
+</h2>
+
+<p>
+    Explore our products through augmented reality
+    and discover how they look in your space.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="card-icon">
+    ✦
+</div>
+
+<h3>
+    Augmented Reality
+</h3>
+
+<p>
+    View our products directly in your environment
+    using AR technology.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+    ◈
+</div>
+
+<h3>
+    Interactive Experience
+</h3>
+
+<p>
+    Experience products in a completely new way
+    before making your decision.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+    ◆
+</div>
+
+<h3>
+    Professional Service
+</h3>
+
+<p>
+    Contact our team to discuss your project,
+    requirements and booking.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SAMPLES
+========================================================= -->
+
+<section
+    class="samples"
+    id="samples"
+>
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<small>
+    Our Work
+</small>
+
+<h2>
+    Samples & Projects
+</h2>
+
+<p>
+    Explore some of our previous projects
+    and creative work.
+</p>
+
+</div>
+
+
+<div class="sample-grid">
+
+
+<a
+    href="13d.usdz"
+    class="sample"
+>
+
+<img
+    src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80"
+    alt="Modern furniture sample"
+>
+
+<div class="sample-overlay">
+
+<h3>
+    Project One
+</h3>
+
+</div>
+
+</a>
+
+
+<a
+    href="model.usdz"
+    class="sample"
+>
+
+<img
+    src="https://images.unsplash.com/photo-1550226891-ef816aed4a98?auto=format&fit=crop&w=900&q=80"
+    alt="Interior design sample"
+>
+
+<div class="sample-overlay">
+
+<h3>
+    Project Two
+</h3>
+
+</div>
+
+</a>
+
+
+<a
+    href="og.usdz"
+    class="sample"
+>
+
+<img
+    src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=900&q=80"
+    alt="Modern chair sample"
+>
+
+<div class="sample-overlay">
+
+<h3>
+    Project Three
+</h3>
+
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     BOOKING
+========================================================= -->
+
+<section
+    class="booking"
+    id="booking"
+>
+
+<div class="section-container">
+
+
+<div class="section-heading">
+
+<small>
+    Let's Work Together
+</small>
+
+<h2>
+    Ready to get started?
+</h2>
+
+<p>
+    Book a consultation or request more information
+    about our services.
+</p>
+
+</div>
+
+
+<a
+    href="https://wa.me/260975117662?text=Hello%20AR13%2C%20I%20would%20like%20to%20make%20a%20booking."
+    target="_blank"
+    rel="noopener"
+    class="button"
+>
+    💬 Book via WhatsApp
+</a>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+<div class="section-container">
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h2>
+    Let's talk.
+</h2>
+
+<p>
+    Have a question, project idea or need more
+    information? Send us a message.
+</p>
+
+
+<div class="contact-details">
+
+
+<div class="contact-item">
+
+<strong>
+    WhatsApp
+</strong>
+
+<span>
+    +260 975 117 662
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+    Email
+</strong>
+
+<span>
+    hello@yourbrand.com
+</span>
+
+</div>
+
+
+<div class="contact-item">
+
+<strong>
+    Location
+</strong>
+
+<span>
+    Zambia
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- CONTACT FORM -->
+
+<form
+    class="contact-form"
+    action="mailto:hello@yourbrand.com"
+    method="post"
+    enctype="text/plain"
+>
+
+<input
+    type="text"
+    name="name"
+    placeholder="Your Name"
+    autocomplete="name"
+    required
+>
+
+<input
+    type="email"
+    name="email"
+    placeholder="Email Address"
+    autocomplete="email"
+    required
+>
+
+<input
+    type="text"
+    name="subject"
+    placeholder="Subject"
+>
+
+<textarea
+    name="message"
+    placeholder="Tell us about your project..."
+    required
+></textarea>
+
+<button
+    type="submit"
+    class="button button-dark"
+>
+    Send Message
+</button>
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+© 2026 Studio 13D Media. All rights reserved.
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const menuButton =
+    document.getElementById(
+        "mobileMenuButton"
+    );
+
+const mobileNavigation =
+    document.getElementById(
+        "mobileNavigation"
+    );
+
+
+menuButton.addEventListener(
+    "click",
+    function () {
+
+        const isOpen =
+            mobileNavigation.classList.toggle(
+                "active"
+            );
+
+        document.body.classList.toggle(
+            "menu-open",
+            isOpen
+        );
+
+        menuButton.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
+    }
+);
+
+
+/* =========================================================
+   CLOSE MOBILE MENU
+========================================================= */
+
+const mobileLinks =
+    mobileNavigation.querySelectorAll(
+        "a"
+    );
+
+
+mobileLinks.forEach(
+    function (link) {
+
+        link.addEventListener(
+            "click",
+            function () {
+
+                mobileNavigation.classList.remove(
+                    "active"
+                );
+
+                document.body.classList.remove(
+                    "menu-open"
+                );
+
+                menuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================================
+   DEVICE DETECTION
+========================================================= */
+
+function detectDevice() {
+
+    const isMobile =
+        window.matchMedia(
+            "(max-width: 600px)"
+        ).matches;
+
+    if (isMobile) {
+
+        document.body.classList.add(
+            "mobile-device"
+        );
+
+    } else {
+
+        document.body.classList.remove(
+            "mobile-device"
+        );
+
+    }
+
+}
+
+detectDevice();
+
+window.addEventListener(
+    "resize",
+    detectDevice
+);
+
+
+/* =========================================================
+   ANDROID AR SCENE VIEWER
+========================================================= */
+
+/*
+    IMPORTANT:
+
+    Android Scene Viewer requires a GLB/glTF model.
+
+    Example:
+
+        model.usdz
+        model.glb
+
+    USDZ  -> iPhone / iPad
+    GLB   -> Android
+*/
+
+
+const androidARButton =
+    document.getElementById(
+        "androidARButton"
+    );
+
+
+/*
+    Your Android GLB model.
+
+    CHANGE THIS if your file has a different name.
+*/
+
+const androidModel =
+    "model.glb";
+
+
+/*
+    Website users are sent here if ARCore /
+    Scene Viewer is unavailable.
+*/
+
+const fallbackURL =
+    window.location.href;
+
+
+/*
+    Construct the Android Scene Viewer Intent.
+
+    mode=ar_only means:
+
+    DO NOT show the normal 3D model viewer.
+
+    Go directly to AR when possible.
+*/
+
+const androidIntent =
+    "intent://arvr.google.com/scene-viewer/1.0" +
+
+    "?file=" +
+    encodeURIComponent(androidModel) +
+
+    "&mode=ar_only" +
+
+    "#Intent;" +
+
+    "scheme=https;" +
+
+    "package=com.google.android.googlequicksearchbox;" +
+
+    "S.browser_fallback_url=" +
+    encodeURIComponent(fallbackURL) +
+
+    ";end";
+
+
+androidARButton.href =
+    androidIntent;
+
+
+/*
+    Optional Android-only behavior.
+
+    On Android devices the button uses Scene Viewer.
+
+    On iPhone/iPad the Android button is hidden.
+*/
+
+const userAgent =
+    navigator.userAgent ||
+    navigator.vendor ||
+    window.opera;
+
+
+const isAndroid =
+    /android/i.test(userAgent);
+
+const isIOS =
+    /iPad|iPhone|iPod/.test(userAgent) ||
+    (
+        navigator.platform === "MacIntel" &&
+        navigator.maxTouchPoints > 1
+    );
+
+
+if (!isAndroid) {
+
+    androidARButton.style.display =
+        "none";
+
+}
+
+
+/* =========================================================
+   PREVENT ANDROID BUTTON FROM BEING USED AS NORMAL LINK
+========================================================= */
+
+androidARButton.addEventListener(
+    "click",
+    function (event) {
+
+        if (!isAndroid) {
+
+            event.preventDefault();
+
+            alert(
+                "Android AR is available on compatible Android devices."
+            );
+
+        }
+
+    }
+);
+
+
+</script>
+
+
+</body>
+</html>
