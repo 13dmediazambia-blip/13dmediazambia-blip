@@ -19,11 +19,6 @@
 
 <title>STUDIO 13D | Photography & Videography Studio</title>
 
-
-<!-- =====================================================
-     GOOGLE FONT
-===================================================== -->
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link
@@ -45,27 +40,18 @@
 :root {
 
     --black: #0d0d0d;
-
     --dark: #151515;
-
     --dark-grey: #202020;
-
     --medium-grey: #292929;
-
     --gray: #a7a7a7;
-
     --light-gray: #d7d7d7;
-
     --border: #383838;
-
     --white: #ffffff;
 
     --gold: #c89b3c;
-
     --gold-light: #ddb14e;
 
     --radius: 18px;
-
     --max-width: 1200px;
 
 }
@@ -76,22 +62,15 @@
 ===================================================== */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 
 html {
-
     scroll-behavior: smooth;
-
     scroll-padding-top: 75px;
-
 }
 
 
@@ -111,34 +90,24 @@ body {
 
 
 body.lightbox-open {
-
     overflow: hidden;
-
 }
 
 
 a {
-
     text-decoration: none;
-
     color: inherit;
-
 }
 
 
 img {
-
     max-width: 100%;
-
     display: block;
-
 }
 
 
 button {
-
     font-family: inherit;
-
 }
 
 
@@ -169,7 +138,7 @@ header {
 
     max-width: var(--max-width);
 
-    height: 68px;
+    height: 76px;
 
     margin: auto;
 
@@ -184,13 +153,83 @@ header {
 }
 
 
+/* =====================================================
+   LOGO / BRAND
+===================================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+
+}
+
+
+.logo-image {
+
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
+
+    display: block;
+
+}
+
+
+/*
+   LOGO PLACEHOLDER
+
+   Replace the src in the HTML with your own logo file,
+   for example:
+
+   <img src="logo.png" class="logo-image" ...>
+
+   If you don't have a logo yet, the placeholder below
+   simply displays a small logo area.
+*/
+
+
+.logo-placeholder {
+
+    width: 42px;
+
+    height: 42px;
+
+    border: 0px dashed #555;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #777;
+
+    font-size: 8px;
+
+    text-align: center;
+
+}
+
+
 .logo {
 
-    font-size: 21px;
+    font-size: 27px;
 
     font-weight: 800;
 
-    letter-spacing: -.5px;
+    letter-spacing: -1px;
+
+    white-space: nowrap;
 
 }
 
@@ -229,9 +268,7 @@ header {
 
 
 .nav-links a:hover {
-
     color: var(--gold);
-
 }
 
 
@@ -249,9 +286,7 @@ header {
 
 
 .nav-button:hover {
-
     background: var(--gold-light);
-
 }
 
 
@@ -303,7 +338,7 @@ header {
 
     position: fixed;
 
-    inset: 68px 0 0 0;
+    inset: 76px 0 0 0;
 
     z-index: 9998;
 
@@ -317,9 +352,7 @@ header {
 
 
 .mobile-navigation.active {
-
     display: block;
-
 }
 
 
@@ -379,7 +412,7 @@ header {
 
     margin: auto;
 
-    padding: 30px 25px 45px;
+    padding: 30px 25px 40px;
 
     display: grid;
 
@@ -389,7 +422,7 @@ header {
 
     align-items: center;
 
-    min-height: calc(100vh - 68px);
+    min-height: calc(100vh - 76px);
 
 }
 
@@ -423,6 +456,13 @@ header {
 
     margin-bottom: 17px;
 
+}
+
+
+/* YELLOW "HERE" */
+
+.hero-content h1 .here {
+    color: var(--gold);
 }
 
 
@@ -546,9 +586,7 @@ header {
 
 
 .featured-visual:hover img {
-
-    transform: scale(1.04);
-
+    transform: scale(1.06);
 }
 
 
@@ -612,7 +650,7 @@ header {
 
 section {
 
-    padding: 55px 25px;
+    padding: 38px 25px;
 
 }
 
@@ -630,7 +668,7 @@ section {
 
     text-align: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 
 }
 
@@ -665,7 +703,7 @@ section {
 
     max-width: 620px;
 
-    margin: 10px auto 0;
+    margin: 8px auto 0;
 
     color: var(--gray);
 
@@ -727,9 +765,7 @@ section {
 
 
 .category-card:hover img {
-
     transform: scale(1.08);
-
 }
 
 
@@ -748,7 +784,6 @@ section {
     padding: 19px;
 
     background:
-
         linear-gradient(
             transparent 30%,
             rgba(0,0,0,.94)
@@ -822,7 +857,7 @@ section {
 
     flex-wrap: wrap;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 
 }
 
@@ -946,11 +981,12 @@ section {
     padding: 20px;
 
     background:
-
         linear-gradient(
             transparent 35%,
             rgba(0,0,0,.9)
         );
+
+    pointer-events: none;
 
 }
 
@@ -1010,6 +1046,8 @@ section {
     box-shadow: 0 8px 25px rgba(0,0,0,.35);
 
     transition: .3s;
+
+    z-index: 3;
 
 }
 
@@ -1101,7 +1139,7 @@ section {
 
 
 /* =====================================================
-   CATEGORY DETAIL SECTIONS
+   CATEGORY DETAIL
 ===================================================== */
 
 .services {
@@ -1123,9 +1161,7 @@ section {
 
 
 .category-detail p {
-
     color: var(--gray);
-
 }
 
 
@@ -1197,7 +1233,6 @@ section {
     text-align: center;
 
     background:
-
         linear-gradient(
             135deg,
             #111,
@@ -1226,16 +1261,23 @@ section {
 
 
 /* =====================================================
-   CONTACT
+   CONTACT / LET'S CREATE
 ===================================================== */
+
+#contact {
+
+    text-align: center;
+
+}
+
 
 .contact-grid {
 
-    display: grid;
+    display: block;
 
-    grid-template-columns: 1fr 1fr;
+    max-width: 650px;
 
-    gap: 45px;
+    margin: auto;
 
 }
 
@@ -1253,27 +1295,37 @@ section {
 
     color: var(--gray);
 
-    margin: 10px 0 22px;
+    margin: 8px auto 16px;
+
+    max-width: 500px;
 
 }
 
+
+/* SMALLER INFORMATION BOX AREA */
 
 .contact-details {
 
     display: grid;
 
-    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 8px;
+
+    max-width: 600px;
+
+    margin: auto;
 
 }
 
 
 .contact-item {
 
-    padding: 14px;
+    padding: 10px 8px;
 
     border: 1px solid var(--border);
 
-    border-radius: 11px;
+    border-radius: 9px;
 
     background: #252525;
 
@@ -1284,7 +1336,7 @@ section {
 
     display: block;
 
-    font-size: 11px;
+    font-size: 10px;
 
 }
 
@@ -1293,72 +1345,18 @@ section {
 
     color: var(--gray);
 
-    font-size: 12px;
+    font-size: 10px;
+
+    word-break: break-word;
 
 }
 
 
-/* =====================================================
-   CONTACT FORM
-===================================================== */
-
-.contact-form {
-
-    display: grid;
-
-    gap: 10px;
-
-}
-
-
-.contact-form input,
-.contact-form textarea {
-
-    width: 100%;
-
-    padding: 13px;
-
-    border: 1px solid var(--border);
-
-    border-radius: 9px;
-
-    background: #252525;
-
-    color: white;
-
-    outline: none;
-
-    font-family: inherit;
-
-    font-size: 13px;
-
-}
-
-
-.contact-form textarea {
-
-    height: 120px;
-
-    resize: vertical;
-
-}
-
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-
-    border-color: var(--gold);
-
-}
-
-
-.contact-form button {
-
-    border: none;
-
-    cursor: pointer;
-
-}
+/*
+   CONTACT FORM REMOVED
+   The old Name, Email, Project Type,
+   Message and Send Enquiry form has been removed.
+*/
 
 
 /* =====================================================
@@ -1383,7 +1381,7 @@ footer {
 
 
 /* =====================================================
-   LIGHTBOX
+   SLIDESHOW LIGHTBOX
 ===================================================== */
 
 .lightbox {
@@ -1402,23 +1400,40 @@ footer {
 
     padding: 25px;
 
-    background: rgba(0,0,0,.94);
+    background: rgba(0,0,0,.95);
 
 }
 
 
 .lightbox.active {
+    display: flex;
+}
+
+
+.lightbox-content {
+
+    position: relative;
+
+    width: min(1000px, 92vw);
 
     display: flex;
+
+    align-items: center;
+
+    justify-content: center;
 
 }
 
 
 .lightbox-image {
 
-    max-width: 92vw;
+    max-width: 82vw;
 
-    max-height: 87vh;
+    max-height: 78vh;
+
+    width: auto;
+
+    height: auto;
 
     object-fit: contain;
 
@@ -1426,6 +1441,72 @@ footer {
 
     box-shadow: 0 30px 100px rgba(0,0,0,.7);
 
+    user-select: none;
+
+    -webkit-user-drag: none;
+
+}
+
+
+/* =====================================================
+   SLIDESHOW ARROWS
+===================================================== */
+
+.slideshow-arrow {
+
+    position: fixed;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid #555;
+
+    background: rgba(30,30,30,.9);
+
+    color: white;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    z-index: 10002;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: .25s;
+
+}
+
+
+.slideshow-arrow:hover {
+
+    background: var(--gold);
+
+    color: #111;
+
+    border-color: var(--gold);
+
+}
+
+
+.slideshow-prev {
+    left: 25px;
+}
+
+
+.slideshow-next {
+    right: 25px;
 }
 
 
@@ -1453,10 +1534,33 @@ footer {
 
     cursor: pointer;
 
+    z-index: 10003;
+
 }
 
 
 .lightbox-caption {
+
+    position: fixed;
+
+    bottom: 48px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 13px;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+}
+
+
+.slide-counter {
 
     position: fixed;
 
@@ -1466,11 +1570,17 @@ footer {
 
     transform: translateX(-50%);
 
-    color: white;
+    padding: 5px 11px;
 
-    font-size: 12px;
+    border-radius: 20px;
 
-    text-align: center;
+    background: rgba(0,0,0,.7);
+
+    color: #bbb;
+
+    font-size: 11px;
+
+    z-index: 10003;
 
 }
 
@@ -1529,6 +1639,32 @@ footer {
     }
 
 
+    .brand {
+
+        gap: 7px;
+
+    }
+
+
+    .logo {
+
+        font-size: 22px;
+
+        letter-spacing: -.7px;
+
+    }
+
+
+    .logo-placeholder,
+    .logo-image {
+
+        width: 34px;
+
+        height: 34px;
+
+    }
+
+
     .nav-links {
 
         display: none;
@@ -1556,7 +1692,7 @@ footer {
 
         grid-template-columns: 1fr;
 
-        padding: 25px 17px 35px;
+        padding: 25px 17px 30px;
 
         gap: 22px;
 
@@ -1644,14 +1780,14 @@ footer {
 
     section {
 
-        padding: 45px 17px;
+        padding: 32px 17px;
 
     }
 
 
     .section-heading {
 
-        margin-bottom: 25px;
+        margin-bottom: 20px;
 
     }
 
@@ -1676,14 +1812,14 @@ footer {
 
         grid-template-columns: 1fr;
 
-        gap: 11px;
+        gap: 10px;
 
     }
 
 
     .category-card {
 
-        height: 320px;
+        height: 300px;
 
     }
 
@@ -1694,7 +1830,7 @@ footer {
 
         gap: 6px;
 
-        margin-bottom: 17px;
+        margin-bottom: 15px;
 
     }
 
@@ -1712,7 +1848,7 @@ footer {
 
         grid-template-columns: 1fr;
 
-        grid-auto-rows: 280px;
+        grid-auto-rows: 270px;
 
         gap: 10px;
 
@@ -1755,9 +1891,7 @@ footer {
 
     .contact-grid {
 
-        grid-template-columns: 1fr;
-
-        gap: 32px;
+        max-width: 100%;
 
     }
 
@@ -1769,10 +1903,18 @@ footer {
     }
 
 
-    .contact-form input,
-    .contact-form textarea {
+    .contact-details {
 
-        font-size: 16px;
+        grid-template-columns: 1fr;
+
+        max-width: 420px;
+
+    }
+
+
+    .contact-item {
+
+        padding: 10px 12px;
 
     }
 
@@ -1781,16 +1923,46 @@ footer {
 
     .lightbox {
 
-        padding: 15px;
+        padding: 10px;
 
     }
 
 
     .lightbox-image {
 
-        max-width: 96vw;
+        max-width: 88vw;
 
-        max-height: 80vh;
+        max-height: 72vh;
+
+    }
+
+
+    .slideshow-arrow {
+
+        width: 43px;
+
+        height: 43px;
+
+        font-size: 22px;
+
+    }
+
+
+    .slideshow-prev {
+        left: 10px;
+    }
+
+
+    .slideshow-next {
+        right: 10px;
+    }
+
+
+    .lightbox-caption {
+
+        bottom: 47px;
+
+        font-size: 11px;
 
     }
 
@@ -1802,6 +1974,23 @@ footer {
 ===================================================== */
 
 @media(max-width:380px) {
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+
+    .logo-placeholder,
+    .logo-image {
+
+        width: 30px;
+
+        height: 30px;
+
+    }
+
 
     .hero-content h1 {
 
@@ -1819,14 +2008,14 @@ footer {
 
     .category-card {
 
-        height: 290px;
+        height: 280px;
 
     }
 
 
     .cinematic-grid {
 
-        grid-auto-rows: 250px;
+        grid-auto-rows: 240px;
 
     }
 
@@ -1849,6 +2038,29 @@ footer {
 <nav class="navbar">
 
 
+<div class="brand">
+
+
+<!-- =================================================
+     LOGO PLACEHOLDER
+
+     TO USE YOUR OWN LOGO:
+
+     Replace the div below with:
+
+     <img src="logo.png"
+          class="logo-image"
+          alt="STUDIO 13D Logo">
+
+================================================== -->
+
+<div class="logo-placeholder">
+<img src="logo.png"
+          class="logo-image"
+          alt="STUDIO 13D Logo">
+</div>
+
+
 <a
     href="#home"
     class="logo">
@@ -1856,6 +2068,8 @@ footer {
     STUDIO<span>13D</span>
 
 </a>
+
+</div>
 
 
 <ul class="nav-links">
@@ -1887,7 +2101,7 @@ Contact
 <li>
 
 <a
-    href="https://wa.me/260975117662?text=Hello%2013D%20MEDIA%2C%20I%27d%20like%20to%20make%20a%20booking."
+    href="https://wa.me/260975117662?text=Hello%2013D%20MEDIA%2C%20I%27d%20like%20to%20make%20a%20booking"
     target="_blank"
     rel="noopener"
     class="nav-button">
@@ -1948,7 +2162,7 @@ Contact Us
 
 
 <a
-    href="https://wa.me/260975117662?text=Hello%2013D%20MEDIA%2C%20I%27d%20like%20to%20make%20a%20booking."
+    href="https://wa.me/260975117662?text=Hello%2013D%20MEDIA%2C%20I%27d%20like%20to%20make%20a%20booking"
     target="_blank"
     rel="noopener"
     class="mobile-book">
@@ -1984,8 +2198,8 @@ Photography & Videography Studio
 
 
 <h1>
-We capture<br>
-what matters.
+Creative<br>
+Lives <span class="here">Here.</span>
 </h1>
 
 
@@ -2012,7 +2226,7 @@ Explore Our Work
 
 
 <a
-    href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20book%20a%20photo%20or%20video%20shoot."
+    href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20book%20a%20photo%20or%20video%20shoot"
     target="_blank"
     rel="noopener"
     class="button button-outline">
@@ -2032,8 +2246,8 @@ Explore Our Work
 
 
 <img
-src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=90"
-alt="Professional camera">
+src="featured2.jpg"
+alt="Featured">
 
 
 <div class="featured-overlay">
@@ -2106,7 +2320,7 @@ href="#conferences"
 class="category-card">
 
 <img
-src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=85"
+src="conference1.jpg"
 alt="Conference photography">
 
 <div class="category-overlay">
@@ -2141,7 +2355,7 @@ href="#weddings"
 class="category-card">
 
 <img
-src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+src="weddings1.jpg"
 alt="Wedding photography">
 
 <div class="category-overlay">
@@ -2333,7 +2547,9 @@ AR Experience
 
 
 
-<!-- CINEMATIC GRID -->
+<!-- =================================================
+     CINEMATIC GRID
+================================================== -->
 
 <div
     class="cinematic-grid"
@@ -2341,12 +2557,15 @@ AR Experience
 
 
 
-<!-- CONFERENCE -->
+<!-- =================================================
+     LIVE EVENT PRODUCTION
+     5 IMAGE SLIDESHOW
+================================================== -->
 
 <div
 class="portfolio-item featured"
 data-category="conference"
-data-image="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=90"
+data-slideshow="live-event"
 data-title="Live Event Production">
 
 <img
@@ -2369,12 +2588,15 @@ Live Event Production
 
 
 
-<!-- WEDDING -->
+<!-- =================================================
+     WEDDING STORIES
+     5 IMAGE SLIDESHOW
+================================================== -->
 
 <div
 class="portfolio-item"
 data-category="wedding"
-data-image="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=90"
+data-slideshow="wedding"
 data-title="Wedding Stories">
 
 <img
@@ -2397,7 +2619,9 @@ Wedding Stories
 
 
 
-<!-- TVC -->
+<!-- =================================================
+     TVC
+================================================== -->
 
 <div
 class="portfolio-item"
@@ -2428,12 +2652,15 @@ Commercial Film
 
 
 
-<!-- CONFERENCE -->
+<!-- =================================================
+     CORPORATE STORIES
+     5 IMAGE SLIDESHOW
+================================================== -->
 
 <div
 class="portfolio-item"
 data-category="conference"
-data-image="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=90"
+data-slideshow="corporate"
 data-title="Corporate Stories">
 
 <img
@@ -2456,12 +2683,15 @@ Corporate Stories
 
 
 
-<!-- AR -->
+<!-- =================================================
+     INTERACTIVE AR EXPERIENCE
+     5 IMAGE SLIDESHOW
+================================================== -->
 
 <div
 class="portfolio-item"
 data-category="ar"
-data-image="https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1200&q=90"
+data-slideshow="ar"
 data-title="Interactive AR Experience">
 
 <img
@@ -2484,7 +2714,9 @@ Interactive AR Experience
 
 
 
-<!-- WEDDING VIDEO -->
+<!-- =================================================
+     WEDDING VIDEO
+================================================== -->
 
 <div
 class="portfolio-item"
@@ -2609,7 +2841,7 @@ class="hero-buttons"
 style="justify-content:center;">
 
 <a
-href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20book%20conference%20photography%20or%20videography."
+href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20book%20conference%20photography%20or%20videography"
 target="_blank"
 rel="noopener"
 class="button button-gold">
@@ -2662,7 +2894,7 @@ class="hero-buttons"
 style="justify-content:center;">
 
 <a
-href="https://wa.me/260975117662?text=Hello%2013D%20Media%2C%20I%27d%20like%20to%20enquire%20about%20wedding%20photography%20and%20videography."
+href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20enquire%20about%20wedding%20photography%20and%20videography"
 target="_blank"
 rel="noopener"
 class="button button-gold">
@@ -2714,7 +2946,7 @@ class="hero-buttons"
 style="justify-content:center;">
 
 <a
-href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20discuss%20a%20TVC%20or%20commercial%20production."
+href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20discuss%20a%20TVC%20or%20commercial%20production"
 target="_blank"
 rel="noopener"
 class="button button-gold">
@@ -2838,10 +3070,10 @@ launches and live events.
 
 <div
 class="hero-buttons"
-style="justify-content:center; margin-top:22px;">
+style="justify-content:center; margin-top:18px;">
 
 <a
-href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20discuss%20an%20AR%20Experience."
+href="https://wa.me/260975117662?text=Hello%20Studio%2013D%2C%20I%27d%20like%20to%20discuss%20an%20AR%20Experience"
 target="_blank"
 rel="noopener"
 class="button button-gold">
@@ -2860,7 +3092,7 @@ class="button button-gold">
 
 
 <!-- =====================================================
-     BOOKING
+     BOOKING / LET'S CREATE
 ===================================================== -->
 
 <section
@@ -2891,7 +3123,7 @@ remembering.
 
 
 <a
-href="https://wa.me/260975117662?text=Hello%2013D%20Media%2C%20I%27d%20like%20to%20make%20a%20booking."
+href="https://wa.me/260975117662?text=Hello%2013D%20Media%2C%20I%27d%20like%20to%20make%20a%20booking"
 target="_blank"
 rel="noopener"
 class="button">
@@ -2907,7 +3139,7 @@ class="button">
 
 
 <!-- =====================================================
-     CONTACT
+     CONTACT / LET'S CREATE
 ===================================================== -->
 
 <section id="contact">
@@ -2979,53 +3211,6 @@ Your City, Zambia
 </div>
 
 
-
-<form
-class="contact-form"
-action="mailto:13dmediazambia@gmail.com"
-method="post"
-enctype="text/plain">
-
-
-<input
-type="text"
-name="name"
-placeholder="Your Name"
-required>
-
-
-<input
-type="email"
-name="email"
-placeholder="Email Address"
-required>
-
-
-<input
-type="text"
-name="project"
-placeholder="Project Type">
-
-
-<textarea
-name="message"
-placeholder="Tell us about your project..."
-required>
-</textarea>
-
-
-<button
-type="submit"
-class="button button-gold">
-
-Send Enquiry
-
-</button>
-
-
-</form>
-
-
 </div>
 
 </div>
@@ -3048,7 +3233,7 @@ All rights reserved.
 
 
 <!-- =====================================================
-     LIGHTBOX
+     SLIDESHOW LIGHTBOX
 ===================================================== -->
 
 <div
@@ -3059,12 +3244,24 @@ id="lightbox">
 <button
 class="lightbox-close"
 id="lightboxClose"
-aria-label="Close image">
+aria-label="Close slideshow">
 
 ×
 
 </button>
 
+
+<button
+class="slideshow-arrow slideshow-prev"
+id="slideshowPrev"
+aria-label="Previous image">
+
+‹
+
+</button>
+
+
+<div class="lightbox-content">
 
 <img
 class="lightbox-image"
@@ -3072,10 +3269,29 @@ id="lightboxImage"
 src=""
 alt="">
 
+</div>
+
+
+<button
+class="slideshow-arrow slideshow-next"
+id="slideshowNext"
+aria-label="Next image">
+
+›
+
+</button>
+
 
 <div
 class="lightbox-caption"
 id="lightboxCaption">
+</div>
+
+
+<div
+class="slide-counter"
+id="slideCounter">
+1 / 5
 </div>
 
 
@@ -3190,7 +3406,7 @@ filterButtons.forEach(function(button) {
                         item.dataset.category === filter
                     ) {
 
-                        item.style.display = "block";
+                        item.style.display = "";
 
                     }
 
@@ -3211,7 +3427,85 @@ filterButtons.forEach(function(button) {
 
 
 /* =====================================================
-   LIGHTBOX
+   FIVE-IMAGE SLIDESHOW DATA
+===================================================== */
+
+/*
+   You can replace ANY of these URLs with your own
+   photographs later.
+
+   Each project contains exactly 5 images.
+*/
+
+
+const slideshows = {
+
+
+    "live-event": [
+
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1600&q=90"
+
+    ],
+
+
+    "wedding": [
+
+        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1513278974582-3e1b4a4fa9a6?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=1600&q=90"
+
+    ],
+
+
+    "corporate": [
+
+        "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1600&q=90"
+
+    ],
+
+
+    "ar": [
+
+        "https://images.unsplash.com/photo-1592478411213-6153e4ebc07d?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1535378917042-10a22c95931a?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1617802690992-15d93263d3a9?auto=format&fit=crop&w=1600&q=90",
+
+        "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1600&q=90"
+
+    ]
+
+};
+
+
+
+/* =====================================================
+   LIGHTBOX ELEMENTS
 ===================================================== */
 
 const lightbox =
@@ -3238,6 +3532,187 @@ document.getElementById(
 );
 
 
+const slideshowPrev =
+document.getElementById(
+    "slideshowPrev"
+);
+
+
+const slideshowNext =
+document.getElementById(
+    "slideshowNext"
+);
+
+
+const slideCounter =
+document.getElementById(
+    "slideCounter"
+);
+
+
+
+/* =====================================================
+   SLIDESHOW STATE
+===================================================== */
+
+let currentSlideshow = [];
+
+let currentSlide = 0;
+
+let currentTitle = "";
+
+
+
+/* =====================================================
+   OPEN SLIDESHOW
+===================================================== */
+
+function openSlideshow(
+    slideshowName,
+    title
+) {
+
+
+    if (
+        !slideshows[slideshowName]
+    ) {
+
+        return;
+
+    }
+
+
+    currentSlideshow =
+        slideshows[slideshowName];
+
+
+    currentSlide = 0;
+
+
+    currentTitle =
+        title || "";
+
+
+    updateSlideshow();
+
+
+    lightbox.classList.add(
+        "active"
+    );
+
+
+    document.body.classList.add(
+        "lightbox-open"
+    );
+
+
+}
+
+
+
+/* =====================================================
+   UPDATE SLIDESHOW
+===================================================== */
+
+function updateSlideshow() {
+
+
+    if (
+        !currentSlideshow.length
+    ) {
+
+        return;
+
+    }
+
+
+    lightboxImage.src =
+        currentSlideshow[currentSlide];
+
+
+    lightboxImage.alt =
+        currentTitle;
+
+
+    lightboxCaption.textContent =
+        currentTitle;
+
+
+    slideCounter.textContent =
+        (currentSlide + 1)
+        + " / "
+        + currentSlideshow.length;
+
+
+}
+
+
+
+/* =====================================================
+   NEXT IMAGE
+===================================================== */
+
+function nextSlide() {
+
+
+    if (
+        !currentSlideshow.length
+    ) {
+
+        return;
+
+    }
+
+
+    currentSlide =
+        (currentSlide + 1)
+        %
+        currentSlideshow.length;
+
+
+    updateSlideshow();
+
+}
+
+
+
+/* =====================================================
+   PREVIOUS IMAGE
+===================================================== */
+
+function previousSlide() {
+
+
+    if (
+        !currentSlideshow.length
+    ) {
+
+        return;
+
+    }
+
+
+    currentSlide =
+        (
+            currentSlide
+            - 1
+            +
+            currentSlideshow.length
+        )
+        %
+        currentSlideshow.length;
+
+
+    updateSlideshow();
+
+}
+
+
+
+/* =====================================================
+   PORTFOLIO CLICK
+===================================================== */
+
 portfolioItems.forEach(
 function(item) {
 
@@ -3247,9 +3722,7 @@ function(item) {
         function() {
 
 
-            /*
-               VIDEO PROJECT
-            */
+            /* VIDEO */
 
             if (item.dataset.video) {
 
@@ -3263,37 +3736,20 @@ function(item) {
             }
 
 
-            /*
-               IMAGE PROJECT
-            */
+            /* SLIDESHOW */
 
-            const image =
-                item.dataset.image;
+            if (
+                item.dataset.slideshow
+            ) {
 
+                openSlideshow(
+                    item.dataset.slideshow,
+                    item.dataset.title
+                );
 
-            const title =
-                item.dataset.title;
+                return;
 
-
-            if (!image) return;
-
-
-            lightboxImage.src =
-                image;
-
-
-            lightboxCaption.textContent =
-                title || "";
-
-
-            lightbox.classList.add(
-                "active"
-            );
-
-
-            document.body.classList.add(
-                "lightbox-open"
-            );
+            }
 
         }
     );
@@ -3303,22 +3759,60 @@ function(item) {
 
 
 /* =====================================================
+   NEXT / PREVIOUS BUTTONS
+===================================================== */
+
+slideshowNext.addEventListener(
+    "click",
+    function(event) {
+
+        event.stopPropagation();
+
+        nextSlide();
+
+    }
+);
+
+
+slideshowPrev.addEventListener(
+    "click",
+    function(event) {
+
+        event.stopPropagation();
+
+        previousSlide();
+
+    }
+);
+
+
+
+/* =====================================================
    CLOSE LIGHTBOX
 ===================================================== */
 
 function closeLightbox() {
 
+
     lightbox.classList.remove(
         "active"
     );
+
 
     document.body.classList.remove(
         "lightbox-open"
     );
 
+
     lightboxImage.src = "";
 
+
+    currentSlideshow = [];
+
+    currentSlide = 0;
+
 }
+
 
 
 lightboxClose.addEventListener(
@@ -3327,9 +3821,15 @@ lightboxClose.addEventListener(
 );
 
 
+
+/* =====================================================
+   CLICK BACKGROUND TO CLOSE
+===================================================== */
+
 lightbox.addEventListener(
     "click",
     function(event) {
+
 
         if (
             event.target === lightbox
@@ -3345,12 +3845,42 @@ lightbox.addEventListener(
 
 
 /* =====================================================
-   ESC KEY
+   KEYBOARD NAVIGATION
 ===================================================== */
 
 document.addEventListener(
     "keydown",
     function(event) {
+
+
+        if (
+            !lightbox.classList.contains(
+                "active"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            event.key === "ArrowRight"
+        ) {
+
+            nextSlide();
+
+        }
+
+
+        if (
+            event.key === "ArrowLeft"
+        ) {
+
+            previousSlide();
+
+        }
+
 
         if (
             event.key === "Escape"
@@ -3360,6 +3890,72 @@ document.addEventListener(
 
         }
 
+    }
+);
+
+
+
+/* =====================================================
+   MOBILE SWIPE NAVIGATION
+===================================================== */
+
+let touchStartX = 0;
+
+let touchEndX = 0;
+
+
+lightbox.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0].screenX;
+
+    },
+    {
+        passive: true
+    }
+);
+
+
+lightbox.addEventListener(
+    "touchend",
+    function(event) {
+
+        touchEndX =
+            event.changedTouches[0].screenX;
+
+
+        const swipeDistance =
+            touchEndX - touchStartX;
+
+
+        if (
+            Math.abs(swipeDistance) < 50
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            swipeDistance < 0
+        ) {
+
+            nextSlide();
+
+        }
+
+        else {
+
+            previousSlide();
+
+        }
+
+    },
+    {
+        passive: true
     }
 );
 
