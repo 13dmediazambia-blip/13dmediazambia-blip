@@ -659,7 +659,7 @@ section{
 
 .services{
 
-    background:white;
+    background:#8f174f;color:#FF3;
 
 }
 
@@ -2555,6 +2555,480 @@ header{
     cursor:pointer;
 }
 
+/* =====================================================
+   FINAL MIKA'S CLOSET DESIGN + MOBILE 3D FIXES
+===================================================== */
+
+
+/* =====================================================
+   HEADER
+   White navigation text
+===================================================== */
+
+header {
+    background: #7357d8 !important;
+    border-bottom: 1px solid rgba(255,255,255,.20) !important;
+}
+
+.nav-links a,
+.nav-links a:visited {
+    color: #ffffff !important;
+}
+
+.nav-links a:hover {
+    color: #ffc857 !important;
+}
+
+.nav-appointment,
+.nav-appointment:visited {
+    color: #ffffff !important;
+}
+
+
+/* =====================================================
+   FASHION MADE AROUND YOU
+   Dark pink background
+===================================================== */
+
+.services {
+    background: #7b174f !important;
+    color: #ffffff !important;
+}
+
+
+/* Main heading — yellow */
+
+.services .section-heading h2 {
+    color: #ffc857 !important;
+}
+
+
+/* Small "WHAT WE DO" heading */
+
+.services .section-heading .label {
+    color: #ffc857 !important;
+}
+
+
+/* Description */
+
+.services .section-heading p {
+    color: #ffffff !important;
+}
+
+
+/* Service titles */
+
+.services .service-card h3 {
+    color: #ffffff !important;
+}
+
+
+/* Service descriptions */
+
+.services .service-card p {
+    color: #ffffff !important;
+}
+
+
+/* Service cards remain readable */
+
+.services .service-card {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   REDUCE SPACE ABOVE "SEE IT IN 3D"
+===================================================== */
+
+.viewer-section {
+    padding-top: 28px !important;
+    padding-bottom: 45px !important;
+}
+
+
+/* Reduce heading bottom spacing */
+
+.viewer-section .section-heading {
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+}
+
+
+/* Heading */
+
+.viewer-section .section-heading h2 {
+    margin-top: 0 !important;
+    margin-bottom: 6px !important;
+}
+
+
+/* Description */
+
+.viewer-section .section-heading p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+/* Reduce space between heading and viewer */
+
+.viewer-section .viewer-layout {
+    margin-top: 0 !important;
+    gap: 28px !important;
+}
+
+
+/* =====================================================
+   3D VIEWER
+===================================================== */
+
+.viewer-box {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Make model-viewer fill its container properly */
+
+.viewer-box model-viewer {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+
+/* =====================================================
+   MOBILE 3D VIEWER
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .viewer-section {
+        padding-top: 25px !important;
+    }
+
+
+    .viewer-layout {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 20px !important;
+        align-items: center !important;
+    }
+
+
+    /* Viewer column */
+
+    .viewer-layout > div:first-child {
+        width: 100% !important;
+        max-width: 560px !important;
+        margin: 0 auto !important;
+    }
+
+
+    /* Actual viewer box */
+
+    .viewer-box {
+        width: 100% !important;
+        max-width: 560px !important;
+        height: 430px !important;
+        margin: 0 auto !important;
+
+        position: relative !important;
+
+        overflow: hidden !important;
+
+        border-radius: 25px !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* GLB viewer */
+
+    .viewer-box model-viewer {
+        position: absolute !important;
+
+        inset: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        max-width: 100% !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: block !important;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* =================================================
+       MODEL LABEL
+    ================================================= */
+
+    .viewer-label {
+        position: absolute !important;
+
+        top: 14px !important;
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+
+        z-index: 20 !important;
+
+        white-space: nowrap !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* =================================================
+       MODEL NAME
+       Move it slightly above controls
+    ================================================= */
+
+    .viewer-model-name {
+        position: absolute !important;
+
+        left: 50% !important;
+
+        bottom: 70px !important;
+
+        transform: translateX(-50%) !important;
+
+        z-index: 20 !important;
+
+        white-space: nowrap !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* =================================================
+       PLAY / PAUSE + RESET CONTROLS
+       
+       CENTER THEM PROPERLY ON MOBILE
+    ================================================= */
+
+    .viewer-controls {
+        position: absolute !important;
+
+        left: 50% !important;
+        right: auto !important;
+
+        bottom: 15px !important;
+
+        transform: translateX(-50%) !important;
+
+        z-index: 30 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 10px !important;
+
+        width: auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    .viewer-control {
+        width: 42px !important;
+        height: 42px !important;
+
+        min-width: 42px !important;
+        min-height: 42px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        flex: 0 0 42px !important;
+
+        box-sizing: border-box !important;
+
+        line-height: 1 !important;
+    }
+
+
+    /* =================================================
+       RIGHT-HAND VIEWER INFORMATION
+    ================================================= */
+
+    .viewer-copy {
+        width: 100% !important;
+        max-width: 560px !important;
+
+        margin: 0 auto !important;
+
+        text-align: center !important;
+    }
+
+
+    .viewer-copy .label {
+        display: block !important;
+    }
+
+
+    .viewer-copy h2 {
+        margin-top: 10px !important;
+    }
+
+
+    .viewer-copy p {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+
+    /* =================================================
+       MODEL SELECTION CARDS
+    ================================================= */
+
+    .model-selector {
+        width: 100% !important;
+
+        display: flex !important;
+
+        justify-content: flex-start !important;
+
+        overflow-x: auto !important;
+
+        box-sizing: border-box !important;
+
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 560px) {
+
+    .viewer-section {
+        padding-top: 22px !important;
+        padding-bottom: 35px !important;
+    }
+
+
+    .viewer-section .section-heading {
+        margin-bottom: 8px !important;
+    }
+
+
+    .viewer-box {
+        width: 100% !important;
+        height: 360px !important;
+
+        border-radius: 22px !important;
+    }
+
+
+    .viewer-box model-viewer {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+
+    .viewer-label {
+        top: 12px !important;
+
+        font-size: 11px !important;
+
+        padding: 8px 12px !important;
+    }
+
+
+    .viewer-model-name {
+        bottom: 66px !important;
+
+        font-size: 12px !important;
+
+        padding: 8px 14px !important;
+
+        max-width: calc(100% - 40px) !important;
+
+        overflow: hidden !important;
+
+        text-overflow: ellipsis !important;
+    }
+
+
+    .viewer-controls {
+        bottom: 12px !important;
+
+        gap: 8px !important;
+    }
+
+
+    .viewer-control {
+        width: 40px !important;
+        height: 40px !important;
+
+        min-width: 40px !important;
+        min-height: 40px !important;
+
+        flex-basis: 40px !important;
+    }
+
+
+    .viewer-copy h2 {
+        font-size: 38px !important;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+    .viewer-box {
+        height: 330px !important;
+    }
+
+
+    .viewer-controls {
+        bottom: 10px !important;
+    }
+
+
+    .viewer-control {
+        width: 38px !important;
+        height: 38px !important;
+
+        min-width: 38px !important;
+        min-height: 38px !important;
+
+        flex-basis: 38px !important;
+    }
+
+}
 </style>
 
 </head>
