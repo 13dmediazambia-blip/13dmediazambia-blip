@@ -1,0 +1,3838 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Mika's Closet | Tailoring & Fashion</title>
+
+<meta
+name="description"
+content="Mika's Closet - bespoke tailoring, custom fashion and contemporary clothing."
+>
+
+<meta name="theme-color" content="#e94f87">
+
+<!-- =====================================================
+     GOOGLE FONTS
+===================================================== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+rel="stylesheet">
+
+
+<!-- =====================================================
+     GOOGLE MODEL VIEWER
+===================================================== -->
+
+<script
+type="module"
+src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+</script>
+
+
+<style>
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root{
+
+    --pink:#e94f87;
+    --pink-dark:#c9346a;
+    --pink-light:#fff0f5;
+
+    --purple:#7357d8;
+    --purple-dark:#5d43bf;
+    --purple-light:#f1edff;
+
+    --yellow:#ffc857;
+    --yellow-light:#fff7dc;
+
+    --green:#50b889;
+    --green-light:#e9fff5;
+
+    --cream:#fffaf7;
+    --white:#ffffff;
+
+    --dark:#24202a;
+    --gray:#6f6974;
+    --light:#f6f2f4;
+
+    --border:#eadfe4;
+
+    --radius:24px;
+
+    --max-width:1250px;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:"DM Sans",sans-serif;
+
+    background:var(--cream);
+
+    color:var(--dark);
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container{
+
+    width:min(92%,var(--max-width));
+
+    margin:auto;
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(255,250,247,.94);
+
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(234,223,228,.7);
+
+}
+
+
+.nav{
+
+    min-height:78px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+}
+
+
+/* LOGO */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+
+.logo-mark{
+
+    width:43px;
+
+    height:43px;
+
+    border-radius:50% 50% 50% 8px;
+
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--purple)
+    );
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-family:"Playfair Display",serif;
+
+    transform:rotate(-8deg);
+
+    overflow:hidden;
+
+}
+
+
+/* Optional actual logo image */
+
+.logo-image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    display:none;
+
+}
+
+
+.logo span{
+
+    color:var(--pink);
+
+}
+
+
+/* NAVIGATION */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:27px;
+
+}
+
+
+.nav-links a{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#4d4751;
+
+    transition:.25s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:var(--pink);
+
+}
+
+
+.nav-appointment{
+
+    background:var(--dark);
+
+    color:white !important;
+
+    padding:12px 19px;
+
+    border-radius:50px;
+
+}
+
+
+.nav-appointment:hover{
+
+    background:var(--pink);
+
+}
+
+
+.menu-toggle{
+
+    display:none;
+
+    border:0;
+
+    background:none;
+
+    font-size:27px;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:720px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:480px;
+
+    height:480px;
+
+    border-radius:50%;
+
+    background:#ffd7e5;
+
+    top:-220px;
+
+    left:-180px;
+
+}
+
+
+.hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    border-radius:50%;
+
+    background:#e9e0ff;
+
+    bottom:-200px;
+
+    right:-150px;
+
+}
+
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+.eyebrow{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:var(--pink);
+
+    background:var(--pink-light);
+
+    padding:9px 15px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+
+.eyebrow::before{
+
+    content:"✦";
+
+}
+
+
+.hero h1{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(48px,6vw,82px);
+
+    line-height:.98;
+
+    letter-spacing:-3px;
+
+    margin-bottom:25px;
+
+}
+
+
+.hero h1 span{
+
+    color:var(--pink);
+
+}
+
+
+.hero-text{
+
+    max-width:550px;
+
+    color:var(--gray);
+
+    font-size:17px;
+
+    line-height:1.75;
+
+    margin-bottom:32px;
+
+}
+
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 23px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.btn-primary{
+
+    background:var(--pink);
+
+    color:white;
+
+    box-shadow:0 12px 25px rgba(233,79,135,.25);
+
+}
+
+
+.btn-primary:hover{
+
+    background:var(--pink-dark);
+
+    transform:translateY(-3px);
+
+}
+
+
+.btn-secondary{
+
+    background:white;
+
+    border:1px solid var(--border);
+
+}
+
+
+.btn-secondary:hover{
+
+    border-color:var(--pink);
+
+    color:var(--pink);
+
+}
+
+
+.hero-visual{
+
+    position:relative;
+
+}
+
+
+.hero-photo{
+
+    height:590px;
+
+    object-fit:cover;
+
+    border-radius:180px 180px 30px 30px;
+
+    box-shadow:0 30px 70px rgba(70,40,55,.18);
+
+}
+
+
+.hero-badge{
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:-35px;
+
+    background:white;
+
+    padding:18px 22px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 40px rgba(50,30,40,.15);
+
+}
+
+
+.hero-badge strong{
+
+    display:block;
+
+    font-family:"Playfair Display",serif;
+
+    font-size:22px;
+
+    color:var(--pink);
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+
+    padding:95px 0;
+
+}
+
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:680px;
+
+    margin:0 auto 50px;
+
+}
+
+
+.section-heading .label{
+
+    color:var(--pink);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+}
+
+
+.section-heading h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(35px,4vw,53px);
+
+    line-height:1.1;
+
+    margin-bottom:15px;
+
+}
+
+
+.section-heading p{
+
+    color:var(--gray);
+
+    line-height:1.7;
+
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services{
+
+    background:white;
+
+}
+
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+.service-card{
+
+    padding:30px 24px;
+
+    border-radius:var(--radius);
+
+    transition:.3s;
+
+}
+
+
+.service-card:nth-child(1){
+
+    background:var(--pink-light);
+
+}
+
+
+.service-card:nth-child(2){
+
+    background:var(--purple-light);
+
+}
+
+
+.service-card:nth-child(3){
+
+    background:var(--yellow-light);
+
+}
+
+
+.service-card:nth-child(4){
+
+    background:var(--green-light);
+
+}
+
+
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.service-icon{
+
+    font-size:34px;
+
+    margin-bottom:20px;
+
+}
+
+
+.service-card h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:24px;
+
+    margin-bottom:10px;
+
+}
+
+
+.service-card p{
+
+    color:var(--gray);
+
+    line-height:1.65;
+
+    font-size:14px;
+
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.products{
+
+    background:var(--cream);
+
+}
+
+
+.filters{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+
+}
+
+
+.filter-btn{
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    border-radius:50px;
+
+    padding:10px 18px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+.filter-btn.active,
+.filter-btn:hover{
+
+    background:var(--pink);
+
+    color:white;
+
+    border-color:var(--pink);
+
+}
+
+
+.product-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+
+.product-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    transition:.3s;
+
+}
+
+
+.product-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 18px 45px rgba(70,40,55,.1);
+
+}
+
+
+.product-image{
+
+    position:relative;
+
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+    cursor:pointer;
+
+}
+
+
+.product-image img{
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+.product-card:hover .product-image img{
+
+    transform:scale(1.06);
+
+}
+
+
+.product-tag{
+
+    position:absolute;
+
+    top:13px;
+
+    left:13px;
+
+    background:white;
+
+    padding:7px 11px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    color:var(--pink);
+
+}
+
+
+.product-info{
+
+    padding:20px;
+
+}
+
+
+.product-info h3{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:22px;
+
+    margin-bottom:7px;
+
+}
+
+
+.product-info p{
+
+    color:var(--gray);
+
+    font-size:13px;
+
+    margin-bottom:15px;
+
+}
+
+
+.product-bottom{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+
+.price{
+
+    font-weight:800;
+
+    color:var(--pink);
+
+}
+
+
+.product-link{
+
+    color:var(--dark);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    background:none;
+
+    border:0;
+
+}
+
+
+/* =====================================================
+   FEATURE BANNER
+===================================================== */
+
+.feature-banner{
+
+    background:var(--purple);
+
+    color:white;
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+}
+
+
+.feature-banner img{
+
+    height:460px;
+
+    object-fit:cover;
+
+}
+
+
+.feature-copy{
+
+    padding:55px;
+
+}
+
+
+.feature-copy .label{
+
+    color:#ffe17a;
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    font-weight:800;
+
+}
+
+
+.feature-copy h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(35px,4vw,55px);
+
+    margin:15px 0;
+
+    line-height:1.05;
+
+}
+
+
+.feature-copy p{
+
+    color:#eee8ff;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+}
+
+
+/* =====================================================
+   3D FASHION VIEWER
+===================================================== */
+
+.viewer-section{
+
+    background:white;
+
+}
+
+
+.viewer-layout{
+
+    display:grid;
+
+    grid-template-columns:1.15fr .85fr;
+
+    gap:45px;
+
+    align-items:center;
+
+}
+
+
+/* MODEL VIEWER */
+
+.viewer-box{
+
+    height:560px;
+
+    background:
+
+        radial-gradient(
+            circle at 30% 20%,
+            #fff2f7,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            145deg,
+            #f5f1ff,
+            #fff
+        );
+
+    border:1px solid var(--border);
+
+    border-radius:35px;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+model-viewer{
+
+    width:100%;
+
+    height:100%;
+
+    --poster-color:transparent;
+
+}
+
+
+/* MODEL LABEL */
+
+.viewer-label{
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    z-index:3;
+
+    background:white;
+
+    border-radius:50px;
+
+    padding:10px 15px;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+/* MODEL NAME */
+
+.viewer-model-name{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:18px;
+
+    transform:translateX(-50%);
+
+    z-index:5;
+
+    background:rgba(36,32,42,.9);
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    white-space:nowrap;
+
+}
+
+
+/* MODEL CONTROLS */
+
+.viewer-controls{
+
+    position:absolute;
+
+    bottom:18px;
+
+    right:18px;
+
+    z-index:10;
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+
+.viewer-control{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:17px;
+
+    transition:.25s;
+
+}
+
+
+.viewer-control:hover{
+
+    background:var(--pink);
+
+    color:white;
+
+    border-color:var(--pink);
+
+}
+
+
+/* VIEWER COPY */
+
+.viewer-copy .label{
+
+    color:var(--pink);
+
+    text-transform:uppercase;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    font-weight:800;
+
+}
+
+
+.viewer-copy h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:50px;
+
+    line-height:1.05;
+
+    margin:15px 0;
+
+}
+
+
+.viewer-copy p{
+
+    color:var(--gray);
+
+    line-height:1.75;
+
+    margin-bottom:22px;
+
+}
+
+
+/* MODEL SELECTOR */
+
+.model-selector{
+
+    display:flex;
+
+    gap:10px;
+
+    overflow-x:auto;
+
+    padding:5px 2px 14px;
+
+    margin-bottom:22px;
+
+    scrollbar-width:thin;
+
+}
+
+
+.model-selector::-webkit-scrollbar{
+
+    height:5px;
+
+}
+
+
+.model-option{
+
+    flex:0 0 auto;
+
+    border:1px solid var(--border);
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:9px;
+
+    width:125px;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    transition:.25s;
+
+}
+
+
+.model-option:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+.model-option.active{
+
+    border:2px solid var(--pink);
+
+    background:var(--pink-light);
+
+}
+
+
+.model-option img{
+
+    height:110px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    margin-bottom:8px;
+
+}
+
+
+.model-option strong{
+
+    display:block;
+
+    font-size:12px;
+
+    margin-bottom:3px;
+
+}
+
+
+.model-option span{
+
+    display:block;
+
+    color:var(--gray);
+
+    font-size:10px;
+
+}
+
+
+/* VIEWER FEATURES */
+
+.viewer-features{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+
+    margin-bottom:28px;
+
+}
+
+
+.viewer-feature{
+
+    padding:15px;
+
+    background:var(--pink-light);
+
+    border-radius:15px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+
+.viewer-note{
+
+    margin-top:15px;
+
+    font-size:12px;
+
+    color:#999;
+
+    line-height:1.6;
+
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery{
+
+    background:var(--cream);
+
+}
+
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    grid-auto-rows:230px;
+
+    gap:14px;
+
+}
+
+
+.gallery-item{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    cursor:pointer;
+
+}
+
+
+.gallery-item:nth-child(1){
+
+    grid-row:span 2;
+
+}
+
+
+.gallery-item:nth-child(4){
+
+    grid-column:span 2;
+
+}
+
+
+.gallery-item img{
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+
+.gallery-item:hover img{
+
+    transform:scale(1.07);
+
+}
+
+
+/* =====================================================
+   APPOINTMENT
+===================================================== */
+
+.appointment{
+
+    background:linear-gradient(
+        135deg,
+        #ffe4ee,
+        #eee8ff
+    );
+
+}
+
+
+.appointment-box{
+
+    background:white;
+
+    border-radius:35px;
+
+    padding:60px;
+
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    align-items:center;
+
+    gap:40px;
+
+    box-shadow:0 25px 70px rgba(70,40,55,.1);
+
+}
+
+
+.appointment-copy h2{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:clamp(35px,4vw,52px);
+
+    margin-bottom:12px;
+
+}
+
+
+.appointment-copy p{
+
+    color:var(--gray);
+
+    max-width:620px;
+
+    line-height:1.7;
+
+}
+
+
+.whatsapp-btn{
+
+    background:#25d366;
+
+    color:white;
+
+    padding:18px 28px;
+
+    border-radius:50px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+    transition:.3s;
+
+}
+
+
+.whatsapp-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(37,211,102,.25);
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:var(--dark);
+
+    color:white;
+
+    padding:55px 0 25px;
+
+}
+
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:1.5fr 1fr 1fr;
+
+    gap:50px;
+
+    padding-bottom:40px;
+
+}
+
+
+.footer-logo{
+
+    font-family:"Playfair Display",serif;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+
+.footer-logo span{
+
+    color:var(--pink);
+
+}
+
+
+footer p{
+
+    color:#aaa3ad;
+
+    line-height:1.7;
+
+    font-size:14px;
+
+}
+
+
+.footer-title{
+
+    font-weight:800;
+
+    margin-bottom:18px;
+
+}
+
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+.footer-links a{
+
+    color:#aaa3ad;
+
+    font-size:14px;
+
+}
+
+
+.footer-links a:hover{
+
+    color:white;
+
+}
+
+
+.copyright{
+
+    border-top:1px solid #39343d;
+
+    padding-top:22px;
+
+    color:#88828c;
+
+    font-size:12px;
+
+    text-align:center;
+
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(20,15,22,.93);
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:25px;
+
+}
+
+
+.lightbox.show{
+
+    display:flex;
+
+}
+
+
+.lightbox img{
+
+    max-width:900px;
+
+    max-height:88vh;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+}
+
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    color:white;
+
+    background:none;
+
+    border:none;
+
+    font-size:38px;
+
+    cursor:pointer;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1050px){
+
+    .service-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .product-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .hero-content{
+
+        gap:40px;
+
+    }
+
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:800px){
+
+    .nav{
+
+        min-height:70px;
+
+    }
+
+
+    .menu-toggle{
+
+        display:block;
+
+    }
+
+
+    .nav-links{
+
+        position:absolute;
+
+        top:70px;
+
+        left:0;
+
+        right:0;
+
+        background:white;
+
+        padding:20px;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:4px;
+
+        border-bottom:1px solid var(--border);
+
+        display:none;
+
+    }
+
+
+    .nav-links.active{
+
+        display:flex;
+
+    }
+
+
+    .nav-links a{
+
+        padding:14px;
+
+        border-radius:10px;
+
+    }
+
+
+    .nav-links a:hover{
+
+        background:var(--pink-light);
+
+    }
+
+
+    .nav-appointment{
+
+        text-align:center;
+
+    }
+
+
+    .hero{
+
+        min-height:auto;
+
+        padding:70px 0;
+
+    }
+
+
+    .hero-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .hero h1{
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .hero-visual{
+
+        max-width:560px;
+
+        margin:auto;
+
+        width:100%;
+
+    }
+
+
+    .hero-photo{
+
+        height:500px;
+
+    }
+
+
+    .hero-badge{
+
+        left:15px;
+
+    }
+
+
+    .feature-banner{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .feature-banner img{
+
+        height:350px;
+
+    }
+
+
+    .feature-copy{
+
+        padding:40px 30px;
+
+    }
+
+
+    .viewer-layout{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .viewer-box{
+
+        height:500px;
+
+    }
+
+
+    .viewer-copy h2{
+
+        font-size:42px;
+
+    }
+
+
+    .appointment-box{
+
+        grid-template-columns:1fr;
+
+        padding:40px 30px;
+
+    }
+
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:560px){
+
+    section{
+
+        padding:70px 0;
+
+    }
+
+
+    .logo{
+
+        font-size:23px;
+
+    }
+
+
+    .logo-mark{
+
+        width:37px;
+
+        height:37px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:48px;
+
+    }
+
+
+    .hero-text{
+
+        font-size:15px;
+
+    }
+
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+
+    .btn{
+
+        width:100%;
+
+    }
+
+
+    .hero-photo{
+
+        height:420px;
+
+        border-radius:120px 120px 25px 25px;
+
+    }
+
+
+    .service-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .product-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:12px;
+
+    }
+
+
+    .product-info{
+
+        padding:14px;
+
+    }
+
+
+    .product-info h3{
+
+        font-size:18px;
+
+    }
+
+
+    .product-info p{
+
+        font-size:11px;
+
+    }
+
+
+    .price{
+
+        font-size:13px;
+
+    }
+
+
+    .gallery-grid{
+
+        grid-template-columns:1fr 1fr;
+
+        grid-auto-rows:180px;
+
+    }
+
+
+    .gallery-item:nth-child(4){
+
+        grid-column:span 2;
+
+    }
+
+
+    .viewer-box{
+
+        height:400px;
+
+        border-radius:25px;
+
+    }
+
+
+    .viewer-features{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .viewer-control{
+
+        width:38px;
+
+        height:38px;
+
+    }
+
+
+    .model-option{
+
+        width:110px;
+
+    }
+
+
+    .model-option img{
+
+        height:95px;
+
+    }
+
+
+    .whatsapp-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+
+    .appointment-box{
+
+        border-radius:25px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="container nav">
+
+
+<a href="#home" class="logo">
+
+<div class="logo-mark">
+
+<!--
+     OPTIONAL LOGO
+
+     To use your actual logo:
+
+     1. Put your logo in:
+        images/mikas-closet-logo.png
+
+     2. Replace the M below with:
+        <img class="logo-image"
+        src="images/mikas-closet-logo.png"
+        alt="Mika's Closet Logo"
+        style="display:block;">
+
+-->
+
+M
+
+</div>
+
+Mika's <span>Closet</span>
+
+</a>
+
+
+<button
+class="menu-toggle"
+id="menuToggle"
+aria-label="Open navigation">
+
+☰
+
+</button>
+
+
+<nav class="nav-links" id="navLinks">
+
+<a href="#home">
+Home
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#collection">
+Collection
+</a>
+
+<a href="#3d">
+3D Preview
+</a>
+
+<a href="#gallery">
+Gallery
+</a>
+
+<a
+href="https://wa.me/260XXXXXXXXX?text=Hello%20Mika's%20Closet,%20I%20would%20like%20to%20book%20a%20tailoring%20appointment."
+class="nav-appointment"
+target="_blank">
+
+Book Appointment
+
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<main>
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+
+<div>
+
+<div class="eyebrow">
+Bespoke Fashion & Tailoring
+</div>
+
+
+<h1>
+
+Wear Your
+
+<span>Story.</span>
+
+</h1>
+
+
+<p class="hero-text">
+
+Welcome to Mika's Closet — where beautiful fabrics,
+creative design and expert tailoring come together to
+create clothing made especially for you.
+
+</p>
+
+
+<div class="hero-buttons">
+
+
+<a
+href="#collection"
+class="btn btn-primary">
+
+Explore Collection →
+
+</a>
+
+
+<a
+href="https://wa.me/260XXXXXXXXX?text=Hello%20Mika's%20Closet,%20I%20would%20like%20to%20book%20an%20appointment."
+target="_blank"
+class="btn btn-secondary">
+
+💬 WhatsApp Us
+
+</a>
+
+
+</div>
+
+</div>
+
+
+<div class="hero-visual">
+
+
+<img
+class="hero-photo"
+src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1000&q=85"
+alt="Fashion model">
+
+
+<div class="hero-badge">
+
+<strong>
+Made For You
+</strong>
+
+Bespoke • Elegant • Unique
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section
+class="services"
+id="services">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="label">
+What We Do
+</div>
+
+<h2>
+Fashion made around you.
+</h2>
+
+<p>
+From the first sketch to the final stitch,
+we create pieces designed to fit your personality,
+body and occasion.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+✂️
+</div>
+
+<h3>
+Bespoke Tailoring
+</h3>
+
+<p>
+Custom-made clothing carefully measured,
+cut and sewn specifically for you.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+👗
+</div>
+
+<h3>
+Occasion Wear
+</h3>
+
+<p>
+Elegant dresses, suits and outfits for weddings,
+parties and unforgettable occasions.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🧵
+</div>
+
+<h3>
+Alterations
+</h3>
+
+<p>
+Professional alterations to make your
+favorite clothing fit beautifully.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+🎨
+</div>
+
+<h3>
+Custom Design
+</h3>
+
+<p>
+Bring your idea, fabric or inspiration and
+we'll turn it into something uniquely yours.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     COLLECTION
+===================================================== -->
+
+<section
+class="products"
+id="collection">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="label">
+Mika's Collection
+</div>
+
+<h2>
+A little fashion inspiration.
+</h2>
+
+<p>
+Explore some of the styles available from Mika's Closet.
+Every design can be customized to suit your preferences.
+</p>
+
+</div>
+
+
+<div class="filters">
+
+<button
+class="filter-btn active"
+data-filter="all">
+
+All
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="dresses">
+
+Dresses
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="suits">
+
+Suits
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="casual">
+
+Casual
+
+</button>
+
+<button
+class="filter-btn"
+data-filter="african">
+
+African Wear
+
+</button>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+
+<div
+class="product-card"
+data-category="dresses">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=85"
+alt="Elegant pink dress">
+
+<span class="product-tag">
+NEW
+</span>
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+Blush Elegance
+</h3>
+
+<p>
+Elegant occasion dress
+</p>
+
+
+<div class="product-bottom">
+
+<span class="price">
+Custom
+</span>
+
+
+<button
+class="product-link"
+onclick="openModel('dress01')">
+
+3D View →
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 2 -->
+
+<div
+class="product-card"
+data-category="dresses">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=800&q=85"
+alt="Elegant fashion dress">
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+Evening Grace
+</h3>
+
+<p>
+Elegant evening design
+</p>
+
+
+<div class="product-bottom">
+
+<span class="price">
+Custom
+</span>
+
+
+<button
+class="product-link"
+onclick="openModel('dress02')">
+
+3D View →
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 3 -->
+
+<div
+class="product-card"
+data-category="suits">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=800&q=85"
+alt="Tailored suit">
+
+<span class="product-tag">
+BESPOKE
+</span>
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+Modern Classic
+</h3>
+
+<p>
+Tailored formal suit
+</p>
+
+
+<div class="product-bottom">
+
+<span class="price">
+Custom
+</span>
+
+
+<button
+class="product-link"
+onclick="openModel('suit01')">
+
+3D View →
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCT 4 -->
+
+<div
+class="product-card"
+data-category="african">
+
+<div class="product-image">
+
+<img
+src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=85"
+alt="African fashion">
+
+<span class="product-tag">
+FEATURED
+</span>
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+Heritage Glow
+</h3>
+
+<p>
+Contemporary African fashion
+</p>
+
+
+<div class="product-bottom">
+
+<span class="price">
+Custom
+</span>
+
+
+<button
+class="product-link"
+onclick="openModel('african01')">
+
+3D View →
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     FEATURE BANNER
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+
+<div class="feature-banner">
+
+
+<img
+src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
+alt="Fashion collection">
+
+
+<div class="feature-copy">
+
+
+<div class="label">
+Your Style. Your Rules.
+</div>
+
+
+<h2>
+Don't just wear fashion. Own it.
+</h2>
+
+
+<p>
+Our pieces are made to celebrate individuality.
+Choose your fabric, silhouette, color and details —
+then let Mika's Closet bring your vision to life.
+</p>
+
+
+<a
+href="https://wa.me/260XXXXXXXXX?text=Hello%20Mika's%20Closet,%20I%20want%20to%20create%20a%20custom%20outfit."
+target="_blank"
+class="btn"
+style="background:white;color:#7357d8;">
+
+Create My Outfit →
+
+</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     3D VIEWER
+===================================================== -->
+
+<section
+class="viewer-section"
+id="3d">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="label">
+Interactive Fashion
+</div>
+
+<h2>
+See it in 3D.
+</h2>
+
+<p>
+Select a design below and explore the garment
+from every angle directly inside your browser.
+</p>
+
+</div>
+
+
+<div class="viewer-layout">
+
+
+<!-- ================================
+     LEFT: MODEL VIEWER
+================================ -->
+
+<div>
+
+
+<div class="viewer-box">
+
+
+<div class="viewer-label">
+↻ Drag • Pinch • Zoom
+</div>
+
+
+<model-viewer
+id="fashionViewer"
+
+src="models/dress-01.glb"
+
+alt="Mika's Closet 3D fashion model"
+
+camera-controls
+
+auto-rotate
+
+rotation-per-second="25deg"
+
+shadow-intensity="1"
+
+shadow-softness="0.8"
+
+exposure="1"
+
+environment-image="neutral"
+
+ar
+
+ar-modes="webxr scene-viewer quick-look"
+
+loading="eager">
+
+</model-viewer>
+
+
+<div
+class="viewer-model-name"
+id="viewerModelName">
+
+Blush Elegance
+
+</div>
+
+
+<div class="viewer-controls">
+
+
+<button
+class="viewer-control"
+onclick="resetModel()"
+title="Reset camera">
+
+↺
+
+</button>
+
+
+<button
+class="viewer-control"
+onclick="toggleRotation()"
+title="Toggle rotation"
+id="rotationButton">
+
+Ⅱ
+
+</button>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- ================================
+     RIGHT: MODEL INFORMATION
+================================ -->
+
+<div class="viewer-copy">
+
+
+<div class="label">
+Mika's 3D Collection
+</div>
+
+
+<h2>
+Explore every detail.
+</h2>
+
+
+<p id="modelDescription">
+
+A graceful bespoke evening design created
+for elegant occasions. Rotate the model,
+zoom in and explore it from every angle.
+
+</p>
+
+
+<!-- MODEL SELECTOR -->
+
+<div class="model-selector">
+
+
+<button
+class="model-option active"
+data-model="dress01"
+onclick="openModel('dress01')">
+
+
+<img
+src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=300&q=80"
+alt="Blush Elegance">
+
+
+<strong>
+Dress 01
+</strong>
+
+<span>
+Blush Elegance
+</span>
+
+</button>
+
+
+<button
+class="model-option"
+data-model="dress02"
+onclick="openModel('dress02')">
+
+
+<img
+src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=300&q=80"
+alt="Evening Grace">
+
+
+<strong>
+Dress 02
+</strong>
+
+<span>
+Evening Grace
+</span>
+
+</button>
+
+
+<button
+class="model-option"
+data-model="suit01"
+onclick="openModel('suit01')">
+
+
+<img
+src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=300&q=80"
+alt="Modern Classic">
+
+
+<strong>
+Suit 01
+</strong>
+
+<span>
+Modern Classic
+</span>
+
+</button>
+
+
+<button
+class="model-option"
+data-model="african01"
+onclick="openModel('african01')">
+
+
+<img
+src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=300&q=80"
+alt="Heritage Glow">
+
+
+<strong>
+African 01
+</strong>
+
+<span>
+Heritage Glow
+</span>
+
+</button>
+
+
+</div>
+
+
+<!-- FEATURES -->
+
+<div class="viewer-features">
+
+
+<div class="viewer-feature">
+↻ 360° Rotation
+</div>
+
+
+<div class="viewer-feature">
+🔍 Zoom & Inspect
+</div>
+
+
+<div class="viewer-feature">
+📱 Mobile Friendly
+</div>
+
+
+<div class="viewer-feature">
+🥽 AR Ready
+</div>
+
+
+</div>
+
+
+<a
+id="modelWhatsApp"
+href="https://wa.me/260XXXXXXXXX"
+target="_blank"
+class="btn btn-primary">
+
+Ask About This Design →
+
+</a>
+
+
+<div class="viewer-note">
+
+<strong>3D Model Setup:</strong>
+
+Place the GLB files in your website's
+<strong>models</strong> folder.
+
+<br><br>
+
+Required files:
+
+<strong>
+dress-01.glb,
+dress-02.glb,
+suit-01.glb,
+african-01.glb
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section
+class="gallery"
+id="gallery">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<div class="label">
+The Mika's Closet Look
+</div>
+
+<h2>
+Made to make you feel amazing.
+</h2>
+
+<p>
+A glimpse into the world of color, texture and style
+at Mika's Closet.
+</p>
+
+</div>
+
+
+<div class="gallery-grid">
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1000&q=85"
+alt="Fashion">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+alt="Fashion style">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85"
+alt="Clothing">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&fit=crop&w=1200&q=85"
+alt="Fashion collection">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=85"
+alt="Tailoring">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     APPOINTMENT
+===================================================== -->
+
+<section
+class="appointment"
+id="appointment">
+
+<div class="container">
+
+
+<div class="appointment-box">
+
+
+<div class="appointment-copy">
+
+<h2>
+Let's create something beautiful.
+</h2>
+
+<p>
+Ready for your next outfit?
+Book a consultation with Mika's Closet and let's
+discuss your measurements, fabric, style and occasion.
+</p>
+
+</div>
+
+
+<a
+href="https://wa.me/260XXXXXXXXX?text=Hello%20Mika's%20Closet,%20I%20would%20like%20to%20book%20a%20tailoring%20appointment.%20Please%20let%20me%20know%20your%20available%20dates."
+target="_blank"
+class="whatsapp-btn">
+
+<span style="font-size:22px;">
+◉
+</span>
+
+Book via WhatsApp
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+
+<div class="footer-grid">
+
+
+<div>
+
+<div class="footer-logo">
+Mika's <span>Closet</span>
+</div>
+
+<p>
+Bespoke tailoring and contemporary fashion
+designed to make every occasion memorable.
+</p>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Explore
+</div>
+
+<div class="footer-links">
+
+<a href="#home">
+Home
+</a>
+
+<a href="#services">
+Services
+</a>
+
+<a href="#collection">
+Collection
+</a>
+
+<a href="#3d">
+3D Preview
+</a>
+
+<a href="#gallery">
+Gallery
+</a>
+
+</div>
+
+</div>
+
+
+<div>
+
+<div class="footer-title">
+Contact
+</div>
+
+<div class="footer-links">
+
+<a
+href="https://wa.me/260XXXXXXXXX"
+target="_blank">
+
+WhatsApp
+
+</a>
+
+<a href="#appointment">
+
+Book Appointment
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© <span id="year"></span>
+Mika's Closet.
+All rights reserved.
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+<!-- =====================================================
+     LIGHTBOX
+===================================================== -->
+
+<div
+class="lightbox"
+id="lightbox">
+
+<button
+class="lightbox-close"
+id="lightboxClose">
+
+×
+
+</button>
+
+
+<img
+id="lightboxImage"
+src=""
+alt="Expanded fashion image">
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuToggle.addEventListener(
+"click",
+() => {
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+    link.addEventListener(
+    "click",
+    () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+
+/* =====================================================
+   PRODUCT FILTER
+===================================================== */
+
+const filterButtons =
+document.querySelectorAll(".filter-btn");
+
+const products =
+document.querySelectorAll(".product-card");
+
+
+filterButtons.forEach(button => {
+
+    button.addEventListener(
+    "click",
+    () => {
+
+        filterButtons.forEach(btn => {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        const filter =
+        button.dataset.filter;
+
+
+        products.forEach(product => {
+
+            if(
+                filter === "all" ||
+                product.dataset.category === filter
+            ){
+
+                product.style.display = "";
+
+            }
+
+            else{
+
+                product.style.display = "none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+/* =====================================================
+   3D MODEL DATABASE
+===================================================== */
+
+const fashionModels = {
+
+    dress01: {
+
+        name:"Blush Elegance",
+
+        file:"dress-01.glb",
+
+        description:
+        "A graceful bespoke evening design created for elegant occasions. Rotate the model, zoom in and explore it from every angle.",
+
+        whatsapp:
+        "Hello Mika's Closet, I am interested in the Blush Elegance design."
+
+    },
+
+
+    dress02: {
+
+        name:"Evening Grace",
+
+        file:"dress-02.glb",
+
+        description:
+        "A sophisticated evening silhouette designed to combine elegance, confidence and contemporary style.",
+
+        whatsapp:
+        "Hello Mika's Closet, I am interested in the Evening Grace design."
+
+    },
+
+
+    suit01: {
+
+        name:"Modern Classic",
+
+        file:"suit-01.glb",
+
+        description:
+        "A refined tailored suit with a clean contemporary silhouette, perfect for formal occasions and professional style.",
+
+        whatsapp:
+        "Hello Mika's Closet, I am interested in the Modern Classic suit."
+
+    },
+
+
+    african01: {
+
+        name:"Heritage Glow",
+
+        file:"african-01.glb",
+
+        description:
+        "A contemporary African-inspired design combining traditional character with a modern fashion silhouette.",
+
+        whatsapp:
+        "Hello Mika's Closet, I am interested in the Heritage Glow African design."
+
+    }
+
+};
+
+
+/* =====================================================
+   MODEL VIEWER ELEMENT
+===================================================== */
+
+const fashionViewer =
+document.getElementById("fashionViewer");
+
+const viewerModelName =
+document.getElementById("viewerModelName");
+
+const modelDescription =
+document.getElementById("modelDescription");
+
+const modelWhatsApp =
+document.getElementById("modelWhatsApp");
+
+
+/* =====================================================
+   OPEN / CHANGE MODEL
+===================================================== */
+
+function openModel(modelID){
+
+    const model =
+    fashionModels[modelID];
+
+
+    if(!model){
+
+        console.error(
+        "Model not found:",
+        modelID
+        );
+
+        return;
+
+    }
+
+
+    /*
+       Smoothly switch model.
+    */
+
+    fashionViewer.pause();
+
+
+    fashionViewer.src =
+    model.file;
+
+
+    viewerModelName.textContent =
+    model.name;
+
+
+    modelDescription.textContent =
+    model.description;
+
+
+    /*
+       Update WhatsApp button.
+    */
+
+    const encodedMessage =
+    encodeURIComponent(model.whatsapp);
+
+
+    modelWhatsApp.href =
+    "https://wa.me/260XXXXXXXXX?text="
+    + encodedMessage;
+
+
+    /*
+       Update selected button.
+    */
+
+    document
+    .querySelectorAll(".model-option")
+    .forEach(option => {
+
+        option.classList.remove("active");
+
+    });
+
+
+    const selected =
+    document.querySelector(
+        `.model-option[data-model="${modelID}"]`
+    );
+
+
+    if(selected){
+
+        selected.classList.add("active");
+
+    }
+
+
+    /*
+       Scroll viewer into view if
+       opened from a product card.
+    */
+
+    if(
+        window.scrollY >
+        document
+        .getElementById("3d")
+        .offsetTop + 200
+    ){
+
+        document
+        .getElementById("3d")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+
+/* =====================================================
+   MODEL LOADED
+===================================================== */
+
+fashionViewer.addEventListener(
+"load",
+() => {
+
+    console.log(
+    "3D model loaded successfully."
+    );
+
+});
+
+
+/* =====================================================
+   MODEL ERROR
+===================================================== */
+
+fashionViewer.addEventListener(
+"error",
+() => {
+
+    console.warn(
+    "Unable to load the selected GLB model."
+    );
+
+});
+
+
+/* =====================================================
+   RESET CAMERA
+===================================================== */
+
+function resetModel(){
+
+    fashionViewer.resetTurntableRotation();
+
+    fashionViewer.cameraOrbit =
+    "0deg 75deg auto";
+
+    fashionViewer.fieldOfView =
+    "30deg";
+
+}
+
+
+/* =====================================================
+   AUTO ROTATION
+===================================================== */
+
+let rotationEnabled = true;
+
+
+function toggleRotation(){
+
+    rotationEnabled =
+    !rotationEnabled;
+
+
+    const rotationButton =
+    document.getElementById(
+        "rotationButton"
+    );
+
+
+    if(rotationEnabled){
+
+        fashionViewer.setAttribute(
+            "auto-rotate",
+            ""
+        );
+
+        rotationButton.textContent =
+        "Ⅱ";
+
+    }
+
+    else{
+
+        fashionViewer.removeAttribute(
+            "auto-rotate"
+        );
+
+        rotationButton.textContent =
+        "▶";
+
+    }
+
+}
+
+
+/* =====================================================
+   LIGHTBOX
+===================================================== */
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxImage =
+document.getElementById("lightboxImage");
+
+const lightboxClose =
+document.getElementById("lightboxClose");
+
+
+document
+.querySelectorAll(
+    ".product-image, .gallery-item"
+)
+.forEach(item => {
+
+    item.addEventListener(
+    "click",
+    () => {
+
+        const image =
+        item.querySelector("img");
+
+
+        lightboxImage.src =
+        image.src;
+
+
+        lightbox.classList.add(
+            "show"
+        );
+
+    });
+
+});
+
+
+lightboxClose.addEventListener(
+"click",
+() => {
+
+    lightbox.classList.remove(
+        "show"
+    );
+
+});
+
+
+lightbox.addEventListener(
+"click",
+event => {
+
+    if(
+        event.target === lightbox
+    ){
+
+        lightbox.classList.remove(
+            "show"
+        );
+
+    }
+
+});
+
+
+document.addEventListener(
+"keydown",
+event => {
+
+    if(event.key === "Escape"){
+
+        lightbox.classList.remove(
+            "show"
+        );
+
+    }
+
+});
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+document
+.getElementById("year")
+.textContent =
+new Date().getFullYear();
+
+
+/* =====================================================
+   INITIAL MODEL
+===================================================== */
+
+openModel("dress01");
+
+
+</script>
+
+
+</body>
+
+</html>
