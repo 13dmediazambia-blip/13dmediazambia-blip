@@ -251,7 +251,6 @@ header{
 
 }
 
-
 /* NAVIGATION */
 
 .nav-links{
@@ -2138,6 +2137,424 @@ footer p{
 
 }
 
+
+/* =====================================================
+   MIKA'S CLOSET — REQUESTED DESIGN OVERRIDES
+===================================================== */
+
+/* Cloth/fabric texture for the first top section */
+.hero{
+    min-height:620px;
+    background:
+        linear-gradient(rgba(255,250,247,.78), rgba(255,250,247,.88)),
+        url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1800&q=85")
+        center center / cover no-repeat;
+}
+
+/* Tighter vertical rhythm throughout the desktop layout */
+section{
+    padding:52px 0;
+}
+
+.section-heading{
+    margin:0 auto 28px;
+}
+
+.section-heading h2{
+    margin-bottom:10px;
+}
+
+.service-grid{
+    gap:14px;
+}
+
+.service-card{
+    padding:22px 20px;
+}
+
+.service-icon{
+    margin-bottom:12px;
+}
+
+.product-grid{
+    gap:16px;
+}
+
+.filters{
+    margin-bottom:20px;
+}
+
+.product-info{
+    padding:15px;
+}
+
+.product-info h3{
+    margin-bottom:5px;
+}
+
+.product-info p{
+    margin-bottom:10px;
+}
+
+.feature-banner{
+    /* Kept only as harmless legacy CSS; the HTML section has been removed. */
+}
+
+.viewer-layout{
+    gap:28px;
+}
+
+.viewer-features{
+    margin-bottom:18px;
+}
+
+.viewer-note{
+    margin-top:10px;
+}
+
+.gallery-grid{
+    gap:10px;
+}
+
+.appointment-box{
+    padding:38px;
+    gap:25px;
+}
+
+footer{
+    padding:38px 0 18px;
+}
+
+.footer-grid{
+    gap:30px;
+    padding-bottom:25px;
+}
+
+/* Deep dark yellow background for the entire 3D section */
+.viewer-section{
+    background:#765500;
+    color:#fff;
+}
+
+.viewer-section .section-heading p,
+.viewer-section .viewer-copy p,
+.viewer-section .viewer-note,
+.viewer-section .viewer-copy .label{
+    color:#f5e7b0;
+}
+
+.viewer-section .section-heading h2,
+.viewer-section .viewer-copy h2{
+    color:#fff;
+}
+
+.viewer-section .viewer-feature{
+    background:rgba(255,255,255,.13);
+    color:#fff;
+}
+
+.viewer-section .model-option{
+    background:#fff;
+    color:var(--dark);
+}
+
+.viewer-section .viewer-box{
+    border-color:rgba(255,255,255,.2);
+}
+
+/* =====================================================
+   MOBILE — CENTER EVERYTHING NEATLY
+===================================================== */
+@media(max-width:800px){
+
+    section{
+        padding:38px 0;
+    }
+
+    .container{
+        width:min(92%,var(--max-width));
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:42px 0;
+        text-align:center;
+        background:
+            linear-gradient(rgba(255,250,247,.82), rgba(255,250,247,.91)),
+            url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1400&q=85")
+            center center / cover no-repeat;
+    }
+
+    .hero-content{
+        gap:26px;
+        justify-items:center;
+    }
+
+    .hero-content > div:first-child{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .eyebrow{
+        margin-bottom:12px;
+    }
+
+    .hero h1{
+        margin-bottom:14px;
+    }
+
+    .hero-text{
+        margin:0 auto 18px;
+        max-width:600px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        align-items:center;
+        width:100%;
+        gap:9px;
+    }
+
+    .hero-buttons .btn{
+        width:min(100%,330px);
+    }
+
+    .hero-visual{
+        margin:0 auto;
+        width:min(100%,560px);
+    }
+
+    .hero-badge{
+        left:50%;
+        transform:translateX(-50%);
+        bottom:18px;
+        white-space:nowrap;
+    }
+
+    .section-heading{
+        text-align:center;
+        margin-bottom:22px;
+    }
+
+    .service-grid{
+        justify-items:center;
+    }
+
+    .service-card{
+        width:100%;
+        text-align:center;
+    }
+
+    .filters{
+        justify-content:center;
+        margin-bottom:16px;
+    }
+
+    .product-grid{
+        justify-items:center;
+    }
+
+    .product-card{
+        width:100%;
+        text-align:center;
+    }
+
+    .product-bottom{
+        justify-content:center;
+        gap:15px;
+    }
+
+    .viewer-layout{
+        gap:22px;
+    }
+
+    .viewer-copy{
+        text-align:center;
+    }
+
+    .viewer-copy .label{
+        display:block;
+    }
+
+    .model-selector{
+        justify-content:center;
+        overflow-x:auto;
+    }
+
+    .viewer-features{
+        text-align:center;
+    }
+
+    .viewer-section .btn{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .gallery-grid{
+        gap:8px;
+    }
+
+    .appointment-box{
+        text-align:center;
+        justify-items:center;
+        padding:28px 20px;
+        gap:18px;
+    }
+
+    .appointment-copy p{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .whatsapp-btn{
+        width:min(100%,330px);
+        justify-content:center;
+    }
+
+    .footer-grid{
+        text-align:center;
+        justify-items:center;
+        gap:22px;
+    }
+
+    .footer-links{
+        align-items:center;
+    }
+}
+
+@media(max-width:560px){
+
+    section{
+        padding:30px 0;
+    }
+
+    .hero{
+        padding:34px 0;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero-photo{
+        height:390px;
+    }
+
+    .service-grid{
+        gap:10px;
+    }
+
+    .product-grid{
+        grid-template-columns:1fr;
+        gap:12px;
+        width:min(100%,360px);
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .product-card{
+        width:100%;
+    }
+
+    .gallery-grid{
+        grid-auto-rows:155px;
+    }
+
+    .viewer-box{
+        height:360px;
+    }
+
+    .viewer-copy h2{
+        font-size:38px;
+    }
+
+    .model-selector{
+        justify-content:flex-start;
+    }
+
+    .appointment-box{
+        border-radius:20px;
+    }
+}
+
+
+
+/* =====================================================
+   LATEST DESIGN UPDATES
+===================================================== */
+
+/* Light purple header */
+header{
+    background:rgba(9,170,173,.97);
+    border-bottom-color:rgba(145,106,180,.25);
+}
+
+/* Make the services heading and the items beneath it more visible */
+.services .section-heading h2,
+.services .service-card h3{
+    font-family:"DM Sans",sans-serif;
+    font-weight:800;
+    letter-spacing:-.02em;
+}
+
+.services .section-heading h2{
+    font-size:clamp(38px,5vw,62px);
+    line-height:1.05;
+}
+
+.services .service-card h3{
+    font-size:21px;
+}
+
+.services .service-card p,
+.services .section-heading p{
+    font-family:"DM Sans",sans-serif;
+    font-weight:500;
+    line-height:1.55;
+}
+
+/* Lighter yellow collection/inspiration section */
+.products{
+    background:#f6df82;
+}
+
+/* Remove the pink All filter tab entirely */
+.products .filters{
+    display:none;
+}
+
+/* Gold-yellow 3D viewer section */
+.viewer-section{
+    background:#c89b3c;
+    color:#fff;
+}
+
+.viewer-section .section-heading p,
+.viewer-section .viewer-copy p,
+.viewer-section .viewer-note,
+.viewer-section .viewer-copy .label{
+    color:#fff4c9;
+}
+
+.viewer-section .section-heading h2,
+.viewer-section .viewer-copy h2{
+    color:#fff;
+}
+
+.viewer-section .viewer-feature{
+    background:rgba(255,255,255,.14);
+    color:#fff;
+}
+
+/* Product 3D buttons */
+.product-link{
+    cursor:pointer;
+}
+
 </style>
 
 </head>
@@ -2473,37 +2890,9 @@ All
 
 </button>
 
-<button
-class="filter-btn"
-data-filter="dresses">
 
-Dresses
 
-</button>
 
-<button
-class="filter-btn"
-data-filter="suits">
-
-Suits
-
-</button>
-
-<button
-class="filter-btn"
-data-filter="casual">
-
-Casual
-
-</button>
-
-<button
-class="filter-btn"
-data-filter="african">
-
-African Wear
-
-</button>
 
 </div>
 
@@ -2723,63 +3112,6 @@ onclick="openModel('african01')">
 
 
 <!-- =====================================================
-     FEATURE BANNER
-===================================================== -->
-
-<section>
-
-<div class="container">
-
-
-<div class="feature-banner">
-
-
-<img
-src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1000&q=85"
-alt="Fashion collection">
-
-
-<div class="feature-copy">
-
-
-<div class="label">
-Your Style. Your Rules.
-</div>
-
-
-<h2>
-Don't just wear fashion. Own it.
-</h2>
-
-
-<p>
-Our pieces are made to celebrate individuality.
-Choose your fabric, silhouette, color and details —
-then let Mika's Closet bring your vision to life.
-</p>
-
-
-<a
-href="https://wa.me/260XXXXXXXXX?text=Hello%20Mika's%20Closet,%20I%20want%20to%20create%20a%20custom%20outfit."
-target="_blank"
-class="btn"
-style="background:white;color:#7357d8;">
-
-Create My Outfit →
-
-</a>
-
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
      3D VIEWER
 ===================================================== -->
 
@@ -2802,7 +3134,6 @@ See it in 3D.
 
 <p>
 Select a design below and explore the garment
-from every angle directly inside your browser.
 </p>
 
 </div>
@@ -3024,27 +3355,6 @@ Heritage Glow
 <div class="viewer-features">
 
 
-<div class="viewer-feature">
-↻ 360° Rotation
-</div>
-
-
-<div class="viewer-feature">
-🔍 Zoom & Inspect
-</div>
-
-
-<div class="viewer-feature">
-📱 Mobile Friendly
-</div>
-
-
-<div class="viewer-feature">
-🥽 AR Ready
-</div>
-
-
-</div>
 
 
 <a
@@ -3060,24 +3370,8 @@ Ask About This Design →
 
 <div class="viewer-note">
 
-<strong>3D Model Setup:</strong>
-
-Place the GLB files in your website's
-<strong>models</strong> folder.
-
-<br><br>
-
-Required files:
-
-<strong>
-dress-01.glb,
-dress-02.glb,
-suit-01.glb,
-african-01.glb
-</strong>
 
 </div>
-
 
 </div>
 
@@ -3615,24 +3909,16 @@ function openModel(modelID){
 
 
     /*
-       Scroll viewer into view if
-       opened from a product card.
+       Always scroll to the 3D viewer when a product's
+       "3D View →" button is clicked, then display the
+       selected model there.
     */
-
-    if(
-        window.scrollY >
-        document
-        .getElementById("3d")
-        .offsetTop + 200
-    ){
-
-        document
+    document
         .getElementById("3d")
         .scrollIntoView({
-            behavior:"smooth"
+            behavior:"smooth",
+            block:"start"
         });
-
-    }
 
 }
 
